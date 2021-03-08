@@ -65,7 +65,7 @@ It should work and your ThinkPad L13 Yoga should boot and work fine. You will at
 </details>
 
 <details>
-<summary><strong> OTHER REPOSITORIES </strong></summary>
+<summary><strong> Other Repositories </strong></summary>
 <br>
 
 
@@ -77,6 +77,8 @@ It should work and your ThinkPad L13 Yoga should boot and work fine. You will at
 <details>
 <summary><strong>Hardware</strong></summary>
 <br>
+
+
 [![UEFI](https://img.shields.io/badge/UEFI-R15ET44W-lightgrey)](https://pcsupport.lenovo.com/ca/en/products/laptops-and-netbooks/thinkpad-l-series-laptops/thinkpad-l13-yoga-type-20r5-20r6/downloads/ds541927-bios-update-utility-bootable-cd-for-windows-10-64-bit-thinkpad-l13-l13-yoga)
 
 ### ThinkPad L13 Yoga
