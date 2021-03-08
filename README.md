@@ -1,4 +1,4 @@
-# L13-Yoga-OpenCore-Hackintosh
+# ThinkPad-L13-Yoga-Hackintosh
 
 **Status: Success | Stable**
 
@@ -8,9 +8,9 @@
 [![macOS-Unstable](https://img.shields.io/badge/macOS-11.2.2-brightgreen.svg)](https://www.apple.com/macos/big-sur)
 
 **DISCLAIMER:**
-As you embark on your Hackintosh journey you are encouraged to **READ** the entire README and [Dortania](https://dortania.github.io/getting-started/) guides before you start. It will save many a message instructing you to RTFM. I am not an expert, I haven't forced you to do anything, put on your big boy pants and take responsibility for any mess you get yourself into.
+As you embark on your Hackintosh journey you are encouraged to **READ** the entire README and [Dortania](https://dortania.github.io/getting-started/) guides before you start. It will save many a message instructing you to RTFM. **I am not an expert**, I haven't forced you to do anything, put on your big boy pants and take responsibility for any mess you get yourself into.
 
-When you encounter bug or want to improve this repo, consider opening an issue or pull request. You can also find a wealth of knowledge on [Reddit](https://www.reddit.com/r/hackintosh/), [TonyMacX86](https://www.tonymacx86.com) or [Google](https://www.google.com).
+All that said I'm happy to help when/where I can. When you encounter bug or want to improve this repo, consider opening an issue or pull request. You can also find a wealth of knowledge on [Reddit](https://www.reddit.com/r/hackintosh/), [TonyMacX86](https://www.tonymacx86.com) or [Google](https://www.google.com).
 
 ## Introduction
 
@@ -33,13 +33,45 @@ It should work and your ThinkPad L13 Yoga should boot and work fine. You will at
 </details>  
 
 <details> 
-<summary><strong>General knowledge & credits</strong></summary>
+<summary><strong>This is a guide!</strong></summary>
+
 
 - To install macOS follow the guides provided by [Dortania](https://dortania.github.io/OpenCore-Install-Guide/)
 
 - Useful tools by [CorpNewt](https://github.com/corpnewt) and [headkaze](https://github.com/headkaze/Hackintool)
 
-- [CREDITS](CREDITS.md) file
+
+</details>  
+
+<details> 
+<summary><strong>Shout out and credits</strong></summary>
+
+
+- Shout out to [oddish_enthusiast](https://www.reddit.com/user/oddish_enthusiast/) who pointed me in the right direction and let me know when OpenCore 0.6.7 fixed booting on 10th gen processors. (He actually had it working before that).
+
+### Credit to all these great people whom I don't know but have made my hackintosh dreams come true:
+
+- [EETagent](https://github.com/EETagent) for his repository (I like the layout of his guide and used it to create this one)
+- The guys from [Acidanthera](https://github.com/acidanthera) that make this possible
+- [Apple](http://apple.com) for macOS and HfsPlus.efi
+- [corpnewt](https://github.com/corpnewt) for [USBMap](https://github.com/corpnewt/USBMap) and [CPUFriendDataProvider](https://github.com/corpnewt/CPUFriendFriend)
+- [headkaze](https://github.com/headkaze) for [Hackintool](https://github.com/headkaze/Hackintool)
+- [jwise](https://github.com/jwise) for [HoRNDIS](https://github.com/jwise/HoRNDIS)
+- [Mieze](https://github.com/Mieze) for [IntelMausiEthernet](https://github.com/Mieze/IntelMausiEthernet)
+- [OpenIntelWireless](https://github.com/OpenIntelWireless/IntelBluetoothFirmware/releases) for [IntelBluetoothFirmware](https://github.com/OpenIntelWireless/IntelBluetoothFirmware)
+- [zhen-zen](https://github.com/zhen-zen) for [YogaSMC](https://github.com/zhen-zen/YogaSMC)
+- And every other contributor
+- People at [r/hackintosh](https://www.reddit.com/r/hackintosh/) for their advice and help
+
+<details>
+<summary><strong> OTHER REPOSITORIES </strong></summary>
+<br>
+
+
+- ThinkPad L13 Yoga -hackintosh repositories:
+  - [hagenest/thinkpad-l13-yoga-hackintosh](https://github.com/hagenest/thinkpad-l13-yoga-hackintosh)
+
+</details>
 
 </details>  
 
@@ -252,17 +284,16 @@ Generate CPUFriendDataProvider for your machine [here](https://github.com/fewtar
 <br>
 ## Audio Setup
 
-Unit has ____ which requires the key or layout-id below.
+The L13 Yoga has CX8070 for audio which requires the boot-arg or device property below. You can use the boot-args to initially setup your config.plist file as suggested in the guide or simply add the device property. Everything should work, built-in microphone, speakers, headphone jack and microphone. 
 
 | Key       | Value    |
 | --------- | -------- |
 | boot-args | alcid=15 |
 
-Using the above boot-arg to initially setup your config.plist file. Everything should work, built-in microphone, speakers, headphone jack and microphone. 
-
-If you're happy with the setup above you can use the guide to replace alcid=71 per below:
-
-- Add audio codec to DeviceProperties - layout-id | data | **47000000**
+| Key                        | Type       | Value        |
+| -------------------------- | ---------- | ------------ |
+| PciRoot(0x0)/Pci(0x1F,0x3) | Dictionary |              |
+| layout-id                  | Data       | **0f000000** |
 
 </details>  
 
