@@ -264,10 +264,9 @@ I used these methods prior to adding the SSDT-OCBAT1-lenovoPRO13.aml from [hagen
 
 Use GenSMBIOS to create your own serial #... based off of your preferred model.
 
-- MacBookPro15,1 -`What I used`
-- MacBookPro15,4 -`Reported as used by others`
+- MacBookPro16,3 -`What I used`
 
-**Note:** If you use a different SMBIOS model than the MacbookPro15,1 that I've used. The provided USB mapping will not work.  You will need to edit the **USBMap.kext file**.  You can right click on the file and select **Show Package Contents**.  From there you can open the Info.plist file in ProperTree and change MacBookPro15,1 to whatever Model ID you've chosen. This should provide a working USBMap.kext.
+**Note:** If you use a different SMBIOS model than the MacbookPro16,3 that I've used. The provided USB mapping will not work.  You will need to edit the **USBMap.kext file**.  You can right click on the file and select **Show Package Contents**.  From there you can open the Info.plist file in ProperTree and change MacBookPro16,3 to whatever Model ID you've chosen. This should provide a working USBMap.kext.
 
 </details>  
 
