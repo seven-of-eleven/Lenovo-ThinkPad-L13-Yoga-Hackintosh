@@ -253,7 +253,7 @@ Opened it with Propertree and changed **ForceSuppressed** to **True**
 
 Another trick to manage your trackpad, if you can't get the battery to work, is to connect a bluetooth trackpad. Once the bluetooth trackpad is connected you can adjust the settings. Disconnect the bluetooth trackpad and your built in one will maintain those settings.
 
-I used these methods prior to receiving a SSDT-Batt.aml that worked from a friendly Redditor [Galactic_Dev](https://www.reddit.com/user/Galactic_Dev)
+I used these methods prior to adding the SSDT-OCBAT1-lenovoPRO13.aml from [hagenest/thinkpad-l13-yoga-hackintosh](https://github.com/hagenest/thinkpad-l13-yoga-hackintosh) repo.
 </details>  
 
 <details>  
