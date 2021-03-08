@@ -343,7 +343,7 @@ The L13 Yoga has CX8070 for audio which requires the boot-arg or device property
 
 - [ ] Boot chime
 - [ ] HDMI
-- [ ] FireVault 2
+- [ ] FileVault 2
 - [ ] Sidecar wired
 - [ ] Sidecar wireless
 - [ ] Windows/Linux from OC boot menu `Not dual booting this system`
