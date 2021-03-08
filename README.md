@@ -120,7 +120,7 @@ NOTE: Prior to OpenCore 0.6.7 MacOS would not boot on this computer.
 
 | Component                   |
 | --------------------------- |
-| ssd_data.aml                |
+| ssdt_data.aml               |
 | SSDT-AWAC.aml               |
 | SSDT-EC-USBX-LAPTOP.aml     |
 | SSDT-OCBAT1-lenovoPRO13.aml |
@@ -221,11 +221,12 @@ NOTE: Prior to OpenCore 0.6.7 MacOS would not boot on this computer.
 <details>
 <summary><strong>Own prev-lang-kbd</strong></summary>
 <br>
+In the config.plist file you set the default language as outlined in the guide. You can either add it as a string or as a data ( HEX data [(ProperTree)](https://github.com/corpnewt/ProperTree) )
 
+The setting is found in the config.plist under: 
 
-
-
-Either add as a string or as a data ( HEX data [(ProperTree)](https://github.com/corpnewt/ProperTree) )
+- NVRAM
+  - 7C436110-AB2A-4BBB-A880-FE41995C9F82
 
 Format is lang-COUNTRY:keyboard
 
@@ -236,7 +237,7 @@ Format is lang-COUNTRY:keyboard
 | prev-lang:kbd | String | en-US:0 |
 
 
-Pick your keyboard layout here:
+It is set to English but you can find alternatives here:
 
 [AppleKeyboardLayouts](https://github.com/acidanthera/OpenCorePkg/blob/master/Utilities/AppleKeyboardLayouts/AppleKeyboardLayouts.txt)
 
@@ -247,8 +248,7 @@ Pick your keyboard layout here:
 <details>  
 <summary><strong>TrackPad - Disable force touch</strong></summary>
 <br>
-
-If the **Battery** management **doesn't show up** in the System Preferences after the SSDT-Batt.aml file is added to your ACPI folder and config.plist file. You will not be able to change any trackpad settings. You may experience the annoying behaviour of clicking on the touchpad and it doing a **Force Touch** where the preview of the file is shown. I found this very annoying. You can disable force touch by modifying the file in `~/Library/Preferences/com.apple.AppleMultitouchTrackpad.plist`
+If the **Battery** management **doesn't show up** in the System Preferences after the SSDT-OCBAT1-lenovoPRO13.aml file is added to your ACPI folder and config.plist file. You will not be able to change any trackpad settings. You may experience the annoying behaviour of clicking on the touchpad and it doing a **Force Touch** where the preview of the file is shown. I found this very annoying. You can disable force touch by modifying the file in `~/Library/Preferences/com.apple.AppleMultitouchTrackpad.plist`
 Opened it with Propertree and changed **ForceSuppressed** to **True**
 
 Another trick to manage your trackpad, if you can't get the battery to work, is to connect a bluetooth trackpad. Once the bluetooth trackpad is connected you can adjust the settings. Disconnect the bluetooth trackpad and your built in one will maintain those settings.
@@ -290,7 +290,6 @@ While first port mapping I followed the [Dortania  guide here](https://dortania.
 <details>  
 <summary><strong>Audio Setup</strong></summary>
 <br>
-## Audio Setup
 
 The L13 Yoga has CX8070 for audio which requires the boot-arg or device property below. You can use the boot-args to initially setup your config.plist file as suggested in the guide or simply add the device property. Everything should work, built-in microphone, speakers, headphone jack and microphone. 
 
