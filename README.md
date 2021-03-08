@@ -221,7 +221,9 @@ NOTE: Prior to OpenCore 0.6.7 MacOS would not boot on this computer.
 <details>
 <summary><strong>Own prev-lang-kbd</strong></summary>
 <br>
-In the config.plist file you set the default language as outlined in the guide. You can either add it as a string or as a data ( HEX data [(ProperTree)](https://github.com/corpnewt/ProperTree) )
+
+
+In the config.plist file you set the default language as outlined in the guide. You can either add it as a string or as a hex data using [ProperTree](https://github.com/corpnewt/ProperTree)
 
 The setting is found in the config.plist under: 
 
@@ -248,6 +250,8 @@ It is set to English but you can find alternatives here:
 <details>  
 <summary><strong>TrackPad - Disable force touch</strong></summary>
 <br>
+
+
 If the **Battery** management **doesn't show up** in the System Preferences after the SSDT-OCBAT1-lenovoPRO13.aml file is added to your ACPI folder and config.plist file. You will not be able to change any trackpad settings. You may experience the annoying behaviour of clicking on the touchpad and it doing a **Force Touch** where the preview of the file is shown. I found this very annoying. You can disable force touch by modifying the file in `~/Library/Preferences/com.apple.AppleMultitouchTrackpad.plist`
 Opened it with Propertree and changed **ForceSuppressed** to **True**
 
