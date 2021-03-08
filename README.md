@@ -46,8 +46,7 @@ It should work and your ThinkPad L13 Yoga should boot and work fine. You will at
 <details> 
 <summary><strong>Shout out and credits</strong></summary>
 
-
-- Shout out to [oddish_enthusiast](https://www.reddit.com/user/oddish_enthusiast/) who pointed me in the right direction and let me know when OpenCore 0.6.7 fixed booting on 10th gen processors. (He actually had it working before that).
+**Shout out** to [oddish_enthusiast](https://www.reddit.com/user/oddish_enthusiast/) who pointed me in the right direction and let me know when OpenCore 0.6.7 fixed booting on 10th gen processors. (He actually had it working before that).
 
 ### Credit to all these great people whom I don't know but have made my hackintosh dreams come true:
 
@@ -63,6 +62,8 @@ It should work and your ThinkPad L13 Yoga should boot and work fine. You will at
 - And every other contributor
 - People at [r/hackintosh](https://www.reddit.com/r/hackintosh/) for their advice and help
 
+</details>
+
 <details>
 <summary><strong> OTHER REPOSITORIES </strong></summary>
 <br>
@@ -71,37 +72,36 @@ It should work and your ThinkPad L13 Yoga should boot and work fine. You will at
 - ThinkPad L13 Yoga -hackintosh repositories:
   - [hagenest/thinkpad-l13-yoga-hackintosh](https://github.com/hagenest/thinkpad-l13-yoga-hackintosh)
 
-</details>
-
 </details>  
 
 <details>
 <summary><strong>Hardware</strong></summary>
 <br>
-
-[![UEFI](https://img.shields.io/badge/UEFI-N2HET58W-lightgrey)](https://pcsupport.lenovo.com/ca/en/products/laptops-and-netbooks/thinkpad-l-series-laptops/thinkpad-l13-yoga-type-20r5-20r6/downloads/ds541927-bios-update-utility-bootable-cd-for-windows-10-64-bit-thinkpad-l13-l13-yoga) <--come back to this.
+[![UEFI](https://img.shields.io/badge/UEFI-R15ET44W-lightgrey)](https://pcsupport.lenovo.com/ca/en/products/laptops-and-netbooks/thinkpad-l-series-laptops/thinkpad-l13-yoga-type-20r5-20r6/downloads/ds541927-bios-update-utility-bootable-cd-for-windows-10-64-bit-thinkpad-l13-l13-yoga)
 
 ### ThinkPad L13 Yoga
 
-| Category  | Component                                                    | Note                                                         |
-| --------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| Type      | 20R5, 20R6                                                   | Check this still                                             |
-| CPU       | Intel Core i5-10210U                                         |                                                              |
-| GPU       | Intel UHD                                                    |                                                              |
-| SSD       | WD 512GB                                                     | Replaced cursed PM 981 which still doesn't work reliably     |
-| Screen    | 13" FHD 1920x1080                                            | Multi touch and pen support working                          |
-| Memory    | 8GB / 2666MHz DDR4                                           |                                                              |
-| Battery   | Integrated Li-Polymer 46Wh                                   | Single battery                                               |
-| Camera    | 720p Camera and 5MP camera                                   | Both cameras working                                         |
-| Wifi & BT | Intel Wireless-AC 9560                                       | Use AirportItlwm for your macOS version and enjoy native Wi-Fi control. |
-| Input     | PS2 Keyboard & **HIDC** -chekc TrackPad (touchscreen and pen) | I'm using [YogaSMC](https://github.com/zhen-zen/YogaSMC) for media keys. |
+| Category  | Component                                            | Note                                                         |
+| --------- | ---------------------------------------------------- | ------------------------------------------------------------ |
+| Type      | 20R5, 20R6                                           |                                                              |
+| CPU       | Intel Core i5-10210U                                 |                                                              |
+| GPU       | Intel UHD                                            |                                                              |
+| SSD       | WD 512GB                                             | Replaced cursed PM 981 which still doesn't work reliably     |
+| Screen    | 13" FHD 1920x1080                                    | Multi touch and pen support working                          |
+| Memory    | 8GB / 2666MHz DDR4                                   |                                                              |
+| Battery   | Integrated Li-Polymer 46Wh                           | Single battery                                               |
+| Camera    | 720p Camera and 5MP camera                           | Both cameras working                                         |
+| Wifi & BT | Intel Wireless-AC 9560                               | Use AirportItlwm for your macOS version and enjoy native Wi-Fi control. |
+| Input     | PS2 Keyboard & I2CHID TrackPad (touchscreen and pen) | I'm using [YogaSMC](https://github.com/zhen-zen/YogaSMC) for media keys. |
 
 </details>  
 
 <details>
-
 <summary><strong>Main software</strong></summary>
 <br>
+
+
+
 
 | Component     | Version |
 | ------------- | ------- |
@@ -135,22 +135,23 @@ NOTE: Prior to OpenCore 0.6.7 MacOS would not boot on this computer.
 | Kext                   | Version |
 | :--------------------- | ------- |
 | AirportItlwm           | 1.2.0   |
-| AppleALC               | 1.5.6   |
+| AppleALC               | 1.5.8   |
+| BrightnessKeys         |         |
 | CPUFriend              | 1.2.3   |
-| CPUFriendDataProvider  | 1.00    |
 | IntelBluetoothFirmware | 1.1.2   |
 | IntelBluetoothInjector | 1.1.2   |
 | IntelMausi             | 1.0.5   |
-| Lilu                   | 1.5.0   |
-| SMCBatteryManager      | 1.1.9   |
-| SMCProcessor           | 1.1.9   |
-| SMCSuperIO             | 1.1.9   |
+| Lilu                   | 1.5.1   |
+| SMCBatteryManager      | 1.2.1   |
+| SMCProcessor           | 1.2.1   |
+| SMCSuperIO             | 1.2.1   |
 | USBMap                 | 1.0.0   |
-| VirtualSMC             | 1.1.9   |
-| VoodooI2C              | 2.6.3   |
+| VirtualSMC             | 1.2.1   |
+| VoodooI2C              | 2.6.5   |
 | VoodooI2CHID           | 1.0     |
-| VoodooPS2Controller    | 2.2.0   |
-| WhateverGreen          | 1.4.6   |
+| VoodooPS2Controller    | 2.2.2   |
+| WhateverGreen          | 1.4.8   |
+| YogaSMC                | 1.4.3   |
 
 </details>
 <details>
@@ -165,12 +166,13 @@ NOTE: Prior to OpenCore 0.6.7 MacOS would not boot on this computer.
 </details>
 
 <details>
-    <summary><strong>Neofetch screenshots</strong></summary>
+    <summary><strong>Screenshot</strong></summary>
     <br>
     <p float="left">
-        <img src="./Other/README_Resources/Neofetch-BigSur.png" alt="Neofetch Big Sur" width="427">
+        <img src="./Other/README_Resources/ScreenShot1.png" alt="BigSur" width="427">
     </p>
 </details> 
+
 
 
 ## Before installation
@@ -186,28 +188,22 @@ NOTE: Prior to OpenCore 0.6.7 MacOS would not boot on this computer.
   - `Trackpad` **Enabled**
 - **Display**
   - `Boot Display Device` **ThinkPad LCD**
-  - `Total Graphics Memory` **256MB**
+  - `Total Graphics Memory` **512MB**
   - `Boot Time Extension` **Disabled**
 - **CPU**
   - `Intel Hyper-Threading Technology` **Enabled**
-- **Thunderbolt**
-  - `Thunderbolt BIOS Assist Mode` **Disabled**
-  - `Security Level` **No Security**
-  - `Support in Pre Boot Environment -> Thunderbolt(TM) device` **Disabled**
 
 **Security**
 
 
 - `Password` **Disabled**
-- `Fingerprint` **Disabled**
 - `Security Chip` **Disabled**
 - `Memory Protection -> Execution Prevention` **Enabled**
-- `Virtualization -> Kernel DMA Protection` **Disabled**
 - `Virtualization -> Intel Virtualization Technology` **Enabled**
 - `Virtualization -> Intel VT-d Feature` **Disabled**
 - `Virtualization -> Enhanced Windows Biometric Security` **Disabled**
 - `I/O Port Access -> FingerPrint Reader` **Disabled**
-- `I/O Port Access -> Wireless WAN` **Disabled**
+- `I/O Port Access -> Memory Card Slot` **Disabled**
 - `Secure Boot -> Secure Boot` **Disabled**
 - `Intel SGX -> Intel SGX Control` **Disabled**
 - `Device Guard` **Disabled**
@@ -221,9 +217,11 @@ NOTE: Prior to OpenCore 0.6.7 MacOS would not boot on this computer.
 </details>  
 
 <details>
-
 <summary><strong>Own prev-lang-kbd</strong></summary>
 <br>
+
+
+
 
 Either add as a string or as a data ( HEX data [(ProperTree)](https://github.com/corpnewt/ProperTree) )
 
@@ -238,7 +236,7 @@ Format is lang-COUNTRY:keyboard
 
 Pick your keyboard layout here:
 
-[AppleKeyboardLayouts.txt](https://github.com/acidanthera/OpenCorePkg/blob/master/Utilities/AppleKeyboardLayouts/AppleKeyboardLayouts.txt)
+[AppleKeyboardLayouts](https://github.com/acidanthera/OpenCorePkg/blob/master/Utilities/AppleKeyboardLayouts/AppleKeyboardLayouts.txt)
 
 </details>
 
@@ -275,7 +273,16 @@ Use GenSMBIOS to create your own serial #... based off of your preferred model.
 <summary><strong>CPUFriend power management</strong></summary>
 <br>
 
-Generate CPUFriendDataProvider for your machine [here](https://github.com/fewtarius/CPUFriendFriend) or use those I've provided. My files are set for power conservation over performance. Highly recommended that you use power management.
+Generate `CPUFriendDataProvider` or `ssdt_data.aml` (choose one) for your machine [here](https://github.com/fewtarius/CPUFriendFriend) or use the ssd_data.aml file provided. My files are set for power conservation over performance. Highly recommended that you use power management.
+
+</details>  
+
+<details>  
+<summary><strong>USB Port Mapping</strong></summary>
+<br>
+
+
+While first port mapping I followed the [Dortania  guide here](https://dortania.github.io/OpenCore-Post-Install/usb/#macos-and-the-15-port-limit) with USBInjectAll.kext install...  when doing so the internal USB ports did not show up and the cameras, touch screen, and bluetooth did not function. I noticed on the `USBmap tool` screen that RHUB was showing so I Googled it and it brought me back to the [Dortania guide here](https://dortania.github.io/OpenCore-Post-Install/usb/manual/manual.html#special-notes). I added the SSDT-RHUB.aml to the APCI folder rebooted and all the ports showed up. I then mapped the USB ports creating the included USBMap.kext file. After mapping the ports I left the SSDT-RHUB.aml file in the APCI folder (not sure if it is still needed?).
 
 </details>  
 
@@ -306,7 +313,7 @@ The L13 Yoga has CX8070 for audio which requires the boot-arg or device property
 - [x] Bluetooth - Intel Wireless-AC 9560 
 - [x] CPU power management
 - [x] GPU UHD hardware acceleration / performance 
-- [x] iMessage, FaceTime, App Store, iTunes Store. **Generate your own SMBIOS**
+- [x] iMessage, FaceTime, App Store, iTunes Store. `Generate your own SMBIOS`
 - [x] Intel I219-V Ethernet port -`works with the Lenovo dongle`
 - [x] Keyboard `Volume and brightness hotkeys, with YogaSMC and BrightnessKey kexts`
 - [x] Realtek® ALC3286 ("ALC285") Audio -`See setup above`
@@ -325,15 +332,14 @@ The L13 Yoga has CX8070 for audio which requires the boot-arg or device property
 <details>  
 <summary><strong>What's not working ⚠️</strong></summary>
 
-- [ ] Fingerprint reader - `There is finally after many years working driver for Linux (python-validity), don't expect macOS driver any time soon.`
-- [ ] PM 981 - `Still unstable. Could work for some, not for others.`
+- [ ] Fingerprint reader - `While there is finally a working driver for Linux (python-validity), don't expect macOS driver any time soon.`
+- [ ] PM 981 NVME drive - `Still unstable. Could work for some, not for others.`
 
 </details>  
 
 <details>  
 <summary><strong>Untested</strong></summary>
 
-- [ ] Thunderbolt  `No device to test.`
 - [ ] Boot chime
 - [ ] HDMI
 - [ ] FireVault 2
