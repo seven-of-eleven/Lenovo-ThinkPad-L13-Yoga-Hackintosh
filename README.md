@@ -314,19 +314,19 @@ The L13 Yoga has CX8070 for audio which requires the boot-arg or device property
 
 - [x] Battery percentage
 - [x] Bluetooth - Intel Wireless-AC 9560 
+- [x] Wifi - Intel Wireless-AC 9560
 - [x] CPU power management
 - [x] GPU UHD hardware acceleration / performance 
 - [x] iMessage, FaceTime, App Store, iTunes Store. `Generate your own SMBIOS`
 - [x] Intel I219-V Ethernet port -`works with the Lenovo dongle`
 - [x] Keyboard `Volume and brightness hotkeys, with YogaSMC and BrightnessKey kexts`
-- [x] Realtek® ALC3286 ("ALC285") Audio -`See setup above`
-- [x] Microphone -`I haven't done much research into this. I plug in a headset and that works`
+- [x]  Audio - Conexant CX8070 -`"alcid=15" -See setup above`
+- [x] Microphone
 - [x] Sleep/Wake 
-- [x] TouchPad `1-3 fingers swipe gestures`
 - [x] TrackPoint  `Works perfectly. Just like on Windows or Linux.`
 - [x] USB Ports `USB map created.`
 - [x] Web camera `Both cameras are working after the USB mapping was done.`
-- [x] Wifi - Intel Wireless-AC 9560
+- [x] TouchPad `1-3 fingers swipe gestures`
 - [x] Multi-Touch Screen `Pen also working`
 - [x] Graphical Boot menu `OpenCanopy (It does work. Not included in OC folder as I skip the boot menu.)` 
 
