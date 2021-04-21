@@ -301,7 +301,7 @@ While first port mapping I followed the [Dortania  guide here](https://dortania.
 <summary><strong>Audio Setup</strong></summary>
 <br>
 
-The L13 Yoga has CX8070 for audio which requires the boot-arg or device property below. You can use the boot-args to initially setup your config.plist file as suggested in the guide or simply add the device property. Everything should work, built-in microphone, speakers, headphone jack and microphone. 
+The L13 Yoga has CX8070 for audio which requires the boot-arg **or** device property below. You can use the boot-args to initially setup your config.plist file as suggested in the guide or simply add the device property. Everything should work, built-in microphone, speakers, headphone jack and microphone. 
 
 | Key       | Value    |
 | --------- | -------- |
