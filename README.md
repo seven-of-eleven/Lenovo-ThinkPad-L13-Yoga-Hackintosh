@@ -30,6 +30,14 @@ EFI (partition)
 
 It should work and your ThinkPad L13 Yoga should boot and work fine. You will at minimum need to generate SMBIOS values if you want Apple services to work. Note that all error reporting/logging has been turned off in the config.plist. You will have a difficult time trouble shooting with the setup provided. You can easily turn on the error reporting and logging if you follow the Dortania guide. Best of luck.
 
+> **NOTE** if you simply wish to copy my EFI please do the following:
+>
+> 1. [Generate SMBIOS values](https://dortania.github.io/OpenCore-Install-Guide/config-laptop.plist/coffee-lake-plus.html#nvram) and add them in the config.plist (Use MacBookPro16,3)
+> 2. Change the value of `showpicker` to  `true` in the config.plist file to provide the opencore menu when booting. 
+> 3. Prepare your install [USB](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/)
+> 4. Move the entire EFI folder (with your modifications) to the proper partition on your [USB](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/mac-install.html#setting-up-opencore-s-efi-environment) (or [hard drive](https://dortania.github.io/OpenCore-Post-Install/universal/oc2hdd.html) once the install is complete).
+> 5. [Install](https://dortania.github.io/OpenCore-Install-Guide/installation/installation-process.html#double-checking-your-work) - You'll need to select F12 to get the boot menu options and **boot from the USB each time the computer restarts** until you've copied the EFI folder onto the hard drive. You may also need to select the correct boot option during install.
+
 </details>  
 
 <details> 
@@ -37,7 +45,6 @@ It should work and your ThinkPad L13 Yoga should boot and work fine. You will at
 
 
 - To install macOS follow the guides provided by [Dortania](https://dortania.github.io/OpenCore-Install-Guide/)
-
 - Useful tools by [CorpNewt](https://github.com/corpnewt) and [headkaze](https://github.com/headkaze/Hackintool)
 
 
@@ -336,7 +343,7 @@ The L13 Yoga has CX8070 for audio which requires the boot-arg or device property
 <summary><strong>What's not working ⚠️</strong></summary>
 
 - [ ] Fingerprint reader - `While there is finally a working driver for Linux (python-validity), don't expect macOS driver any time soon.`
-- [ ] PM 981 NVME drive - `Still unstable. Could work for some, not for others.`
+- [ ] Samsung PM 981 NVME drive - `Still unstable. Could work for some, not for others.`
 
 </details>  
 
