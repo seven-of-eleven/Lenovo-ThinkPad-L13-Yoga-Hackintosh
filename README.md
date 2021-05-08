@@ -335,8 +335,8 @@ The L13 Yoga has CX8070 for audio which requires the boot-arg **or** device prop
 - [x] Web camera `Both cameras are working after the USB mapping was done.`
 - [x] TouchPad `1-3 fingers swipe gestures`
 - [x] Multi-Touch Screen `Pen also working`
-- [x] Graphical Boot menu `OpenCanopy (It does work. Not included in OC folder as I skip the boot menu.)` 
-- [x] HDMI `thanks to 
+- [x] Graphical Boot menu `OpenCanopy (It does work. Not included in OC folder as I generally skip the boot menu.)` 
+- [x] HDMI
 
 </details>  
 
