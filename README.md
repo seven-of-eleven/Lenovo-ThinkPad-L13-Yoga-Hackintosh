@@ -4,8 +4,8 @@
 
 <img align="right" src="./Other/README_Resources/l13-yoga2.png" alt="X1C7 macOS" width="430">
 
-[![OpenCore](https://img.shields.io/badge/OpenCore-0.6.7-blue.svg)](https://github.com/acidanthera/OpenCorePkg)
-[![macOS-Unstable](https://img.shields.io/badge/macOS-11.2.2-brightgreen.svg)](https://www.apple.com/macos/big-sur)
+[![OpenCore](https://img.shields.io/badge/OpenCore-0.6.9-blue.svg)](https://github.com/acidanthera/OpenCorePkg)
+[![macOS-Unstable](https://img.shields.io/badge/macOS-11.3.1-brightgreen.svg)](https://www.apple.com/macos/big-sur)
 
 **DISCLAIMER:**
 As you embark on your Hackintosh journey you are encouraged to **READ** the entire README and [Dortania](https://dortania.github.io/getting-started/) guides before you start. It will save many a message instructing you to RTFM. **I am not an expert**, I haven't forced you to do anything, put on your big boy pants and take responsibility for any mess you get yourself into.
@@ -33,7 +33,7 @@ It should work and your ThinkPad L13 Yoga should boot and work fine. You will at
 > **NOTE** if you simply wish to copy my EFI please do the following:
 >
 > 1. [Generate SMBIOS values](https://dortania.github.io/OpenCore-Install-Guide/config-laptop.plist/coffee-lake-plus.html#nvram) and add them in the config.plist (Use MacBookPro16,3)
-> 2. Change the value of `showpicker` to  `true` in the config.plist file to provide the opencore menu when booting. 
+> 2. Ensure the value of `showpicker` is  `true` in the config.plist file to provide the opencore menu when booting. 
 > 3. Prepare your install [USB](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/)
 > 4. Move the entire EFI folder (with your modifications) to the proper partition on your [USB](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/mac-install.html#setting-up-opencore-s-efi-environment) (or [hard drive](https://dortania.github.io/OpenCore-Post-Install/universal/oc2hdd.html) once the install is complete).
 > 5. [Install](https://dortania.github.io/OpenCore-Install-Guide/installation/installation-process.html#double-checking-your-work) - You'll need to select F12 to get the boot menu options and **boot from the USB each time the computer restarts** until you've copied the EFI folder onto the hard drive. You may also need to select the correct boot option during install.
@@ -47,13 +47,13 @@ It should work and your ThinkPad L13 Yoga should boot and work fine. You will at
 - To install macOS follow the guides provided by [Dortania](https://dortania.github.io/OpenCore-Install-Guide/)
 - Useful tools by [CorpNewt](https://github.com/corpnewt) and [headkaze](https://github.com/headkaze/Hackintool)
 
-
 </details>  
 
 <details> 
 <summary><strong>Shout out and credits</strong></summary>
-
 **Shout out** to [oddish_enthusiast](https://www.reddit.com/user/oddish_enthusiast/) who pointed me in the right direction and let me know when OpenCore 0.6.7 fixed booting on 10th gen processors. (He actually had it working before that).
+
+**Shout out** to[DAlexis74](https://github.com/DAlexis74) for the DevicesProperties patches to enable HDMI.
 
 ### Credit to all these great people whom I don't know but have made my hackintosh dreams come true:
 
@@ -114,10 +114,10 @@ It should work and your ThinkPad L13 Yoga should boot and work fine. You will at
 
 | Component     | Version |
 | ------------- | ------- |
-| macOS Big Sur | 11.2.2  |
-| OpenCore      | v0.6.7* |
+| macOS Big Sur | 11.3.1  |
+| OpenCore      | v0.6.9* |
 
-NOTE: Prior to OpenCore 0.6.7 MacOS would not boot on this computer.
+`*Prior to OpenCore 0.6.7 MacOS would not boot on this computer.`
 
 </details>
 
@@ -143,23 +143,23 @@ NOTE: Prior to OpenCore 0.6.7 MacOS would not boot on this computer.
 
 | Kext                   | Version |
 | :--------------------- | ------- |
-| AirportItlwm           | 1.2.0   |
-| AppleALC               | 1.5.8   |
+| AirportItlwm           | 1.3.0   |
+| AppleALC               | 1.6.0   |
 | BrightnessKeys         |         |
 | CPUFriend              | 1.2.3   |
 | IntelBluetoothFirmware | 1.1.2   |
 | IntelBluetoothInjector | 1.1.2   |
-| IntelMausi             | 1.0.5   |
-| Lilu                   | 1.5.1   |
-| SMCBatteryManager      | 1.2.1   |
-| SMCProcessor           | 1.2.1   |
-| SMCSuperIO             | 1.2.1   |
+| IntelMausi             | 1.0.6   |
+| Lilu                   | 1.5.3   |
+| SMCBatteryManager      | 1.2.3   |
+| SMCProcessor           | 1.2.3   |
+| SMCSuperIO             | 1.2.3   |
 | USBMap                 | 1.0.0   |
-| VirtualSMC             | 1.2.1   |
+| VirtualSMC             | 1.2.3   |
 | VoodooI2C              | 2.6.5   |
-| VoodooI2CHID           | 1.0     |
-| VoodooPS2Controller    | 2.2.2   |
-| WhateverGreen          | 1.4.8   |
+| VoodooI2CHID           | 2.6.5   |
+| VoodooPS2Controller    | 2.2.3   |
+| WhateverGreen          | 1.4.9   |
 | YogaSMC                | 1.4.3   |
 
 </details>
@@ -171,7 +171,7 @@ NOTE: Prior to OpenCore 0.6.7 MacOS would not boot on this computer.
 |     Driver      | Version           |
 | :-------------: | ----------------- |
 |   HfsPlus.efi   | OcBinaryData      |
-| OpenRuntime.efi | OpenCorePkg 0.6.7 |
+| OpenRuntime.efi | OpenCorePkg 0.6.9 |
 </details>
 
 <details>
@@ -327,7 +327,7 @@ The L13 Yoga has CX8070 for audio which requires the boot-arg **or** device prop
 - [x] iMessage, FaceTime, App Store, iTunes Store. `Generate your own SMBIOS`
 - [x] Intel I219-V Ethernet port -`works with the Lenovo dongle`
 - [x] Keyboard `Volume and brightness hotkeys, with YogaSMC and BrightnessKey kexts`
-- [x]  Audio - Conexant CX8070 -`"alcid=15" -See setup above`
+- [x]  Audio - Conexant CX8070 -`"alcid=15" - or see setup above`
 - [x] Microphone
 - [x] Sleep/Wake 
 - [x] TrackPoint  `Works perfectly. Just like on Windows or Linux.`
@@ -336,6 +336,7 @@ The L13 Yoga has CX8070 for audio which requires the boot-arg **or** device prop
 - [x] TouchPad `1-3 fingers swipe gestures`
 - [x] Multi-Touch Screen `Pen also working`
 - [x] Graphical Boot menu `OpenCanopy (It does work. Not included in OC folder as I skip the boot menu.)` 
+- [x] HDMI `thanks to 
 
 </details>  
 
@@ -351,10 +352,9 @@ The L13 Yoga has CX8070 for audio which requires the boot-arg **or** device prop
 <summary><strong>Untested</strong></summary>
 
 - [ ] Boot chime
-- [ ] HDMI
 - [ ] FileVault 2
 - [ ] Sidecar wired
 - [ ] Sidecar wireless
-- [ ] Windows/Linux from OC boot menu `Not dual booting this system`
+- [ ] Windows/Linux from OC boot menu`I'm not dual booting my system but there's no reason it shouldn't work.`
 
 </details> 
