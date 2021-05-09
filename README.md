@@ -2,7 +2,7 @@
 
 **Status: Success | Stable**
 
-<img align="right" src="./Other/README_Resources/l13-yoga2.png" alt="X1C7 macOS" width="430">
+<img align="right" src="./Other/README_Resources/l13-yoga2.png" alt="L13 Yoga macOS" width="430">
 
 [![OpenCore](https://img.shields.io/badge/OpenCore-0.6.9-blue.svg)](https://github.com/acidanthera/OpenCorePkg)
 [![macOS-Unstable](https://img.shields.io/badge/macOS-11.3.1-brightgreen.svg)](https://www.apple.com/macos/big-sur)
