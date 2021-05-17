@@ -51,6 +51,7 @@ It should work and your ThinkPad L13 Yoga should boot and work fine. You will at
 
 <details> 
 <summary><strong>Shout out and credits</strong></summary>
+
 **Shout out** to [oddish_enthusiast](https://www.reddit.com/user/oddish_enthusiast/) who pointed me in the right direction and let me know when OpenCore 0.6.7 fixed booting on 10th gen processors. (He actually had it working before that).
 
 **Shout out** to[DAlexis74](https://github.com/DAlexis74) for the DevicesProperties patches to enable HDMI.
@@ -108,8 +109,6 @@ It should work and your ThinkPad L13 Yoga should boot and work fine. You will at
 <details>
 <summary><strong>Main software</strong></summary>
 <br>
-
-
 
 
 | Component     | Version |
