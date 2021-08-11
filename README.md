@@ -113,7 +113,7 @@ It should work and your ThinkPad L13 Yoga should boot and work fine. You will at
 
 | Component     | Version |
 | ------------- | ------- |
-| macOS Big Sur | 11.3.1  |
+| macOS Big Sur | 11.5.1  |
 | OpenCore      | v0.6.9* |
 
 `*Prior to OpenCore 0.6.7 MacOS would not boot on this computer.`
