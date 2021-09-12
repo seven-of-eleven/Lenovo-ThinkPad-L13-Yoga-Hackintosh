@@ -4,8 +4,8 @@
 
 <img align="right" src="./Other/README_Resources/l13-yoga2.png" alt="L13 Yoga macOS" width="430">
 
-[![OpenCore](https://img.shields.io/badge/OpenCore-0.6.9-blue.svg)](https://github.com/acidanthera/OpenCorePkg)
-[![macOS-Unstable](https://img.shields.io/badge/macOS-11.5.1-brightgreen.svg)](https://www.apple.com/macos/big-sur)
+[![OpenCore](https://img.shields.io/badge/OpenCore-0.7.3-blue.svg)](https://github.com/acidanthera/OpenCorePkg)
+[![macOS-Unstable](https://img.shields.io/badge/macOS-11.5.2-brightgreen.svg)](https://www.apple.com/macos/big-sur)
 
 **DISCLAIMER:**
 As you embark on your Hackintosh journey you are encouraged to **READ** the entire README and [Dortania](https://dortania.github.io/getting-started/) guides before you start. It will save many a message instructing you to RTFM. **I am not an expert**, I haven't forced you to do anything, put on your big boy pants and take responsibility for any mess you get yourself into.
@@ -28,7 +28,7 @@ EFI (partition)
 	├── OC
 ```
 
-It should work and your ThinkPad L13 Yoga should boot and work fine. You will at minimum need to generate SMBIOS values if you want Apple services to work. Note that all error reporting/logging has been turned off in the config.plist. You will have a difficult time trouble shooting with the setup provided. You can easily turn on the error reporting and logging if you follow the Dortania guide. Best of luck.
+It should work and your ThinkPad L13 Yoga should boot and work fine. **You will at minimum need to generate SMBIOS values if you want Apple services to work.** Note that all error reporting/logging has been turned off in the config.plist. You will have a difficult time trouble shooting with the setup provided. You can easily turn on the error reporting and logging if you follow the Dortania guide. Best of luck.
 
 > **NOTE** if you simply wish to copy my EFI please do the following:
 >
@@ -102,7 +102,7 @@ It should work and your ThinkPad L13 Yoga should boot and work fine. You will at
 | Battery   | Integrated Li-Polymer 46Wh                           | Single battery                                               |
 | Camera    | 720p Camera and 5MP camera                           | Both cameras working                                         |
 | Wifi & BT | Intel Wireless-AC 9560                               | Use AirportItlwm for your macOS version and enjoy native Wi-Fi control. |
-| Input     | PS2 Keyboard & I2CHID TrackPad (touchscreen and pen) | I'm using [YogaSMC](https://github.com/zhen-zen/YogaSMC) for media keys. |
+| Input     | PS2 Keyboard & I2CHID TrackPad (touchscreen and pen) | I'm using [YogaSMC](https://github.com/zhen-zen/YogaSMC) for media keys. The kext is in the folder but you'll need to install the app. |
 
 </details>  
 
@@ -113,8 +113,8 @@ It should work and your ThinkPad L13 Yoga should boot and work fine. You will at
 
 | Component     | Version |
 | ------------- | ------- |
-| macOS Big Sur | 11.5.1  |
-| OpenCore      | v0.6.9* |
+| macOS Big Sur | 11.5.2  |
+| OpenCore      | v0.7.3* |
 
 `*Prior to OpenCore 0.6.7 MacOS would not boot on this computer.`
 
@@ -142,35 +142,37 @@ It should work and your ThinkPad L13 Yoga should boot and work fine. You will at
 
 | Kext                   | Version |
 | :--------------------- | ------- |
-| AirportItlwm           | 1.3.0   |
-| AppleALC               | 1.6.0   |
-| BrightnessKeys         |         |
-| CPUFriend              | 1.2.3   |
-| IntelBluetoothFirmware | 1.1.2   |
-| IntelBluetoothInjector | 1.1.2   |
-| IntelMausi             | 1.0.6   |
-| Lilu                   | 1.5.3   |
-| SMCBatteryManager      | 1.2.3   |
-| SMCProcessor           | 1.2.3   |
-| SMCSuperIO             | 1.2.3   |
+| AirportItlwm           | 2.0.0   |
+| AppleALC               | 1.6.4   |
+| BrightnessKeys         | 1.0.2   |
+| CPUFriend              | 1.2.4   |
+| IntelBluetoothFirmware | 2.0.0   |
+| IntelBluetoothInjector | 2.0.0   |
+| IntelMausi             | 1.0.7   |
+| Lilu                   | 1.5.6   |
+| SMCBatteryManager      | 1.2.7   |
+| SMCProcessor           | 1.2.7   |
+| SMCSuperIO             | 1.2.7   |
 | USBMap                 | 1.0.0   |
-| VirtualSMC             | 1.2.3   |
+| VirtualSMC             | 1.2.7   |
 | VoodooI2C              | 2.6.5   |
 | VoodooI2CHID           | 2.6.5   |
-| VoodooPS2Controller    | 2.2.3   |
-| WhateverGreen          | 1.4.9   |
-| YogaSMC                | 1.4.3   |
+| VoodooPS2Controller    | 2.2.5   |
+| WhateverGreen          | 1.5.3   |
+| YogaSMC                | 1.5.1   |
 
 </details>
 <details>
-
-<summary><strong>UEFI drivers</strong></summary>
+  <summary><strong>UEFI drivers</strong></summary>
 <br>
+
+
 
 |     Driver      | Version           |
 | :-------------: | ----------------- |
 |   HfsPlus.efi   | OcBinaryData      |
-| OpenRuntime.efi | OpenCorePkg 0.6.9 |
+| OpenRuntime.efi | OpenCorePkg 0.7.3 |
+
 </details>
 
 <details>
@@ -250,6 +252,14 @@ It is set to English but you can find alternatives here:
 [AppleKeyboardLayouts](https://github.com/acidanthera/OpenCorePkg/blob/master/Utilities/AppleKeyboardLayouts/AppleKeyboardLayouts.txt)
 
 </details>
+
+<details>  
+<summary><strong>Choose your Wifi</strong></summary>
+<br>
+
+Both Airportitlwm kexts for Big Sur and Monterey are installed in the kext folder. I have renamed the files to make them easier to identify but they can both be found [here](https://github.com/OpenIntelWireless/itlwm/releases) if you wish to download your own. The `Big Sur kext is enabled by default` but you can change that easily in the config.plist file under Kernel. **Be sure to have only one enabled.**
+
+</details>  
 
 ## Post-Install
 
@@ -350,7 +360,7 @@ The L13 Yoga has CX8070 for audio which requires the boot-arg **or** device prop
 <details>  
 <summary><strong>Untested</strong></summary>
 
-- [ ] Boot chime
+- [ ] Boot chime (should work I just haven't tried it)
 - [ ] FileVault 2
 - [ ] Sidecar wired
 - [ ] Sidecar wireless
