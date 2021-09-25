@@ -254,10 +254,12 @@ It is set to English but you can find alternatives here:
 </details>
 
 <details>  
-<summary><strong>Choose your Wifi</strong></summary>
+<summary><strong>Big Sur or Monterey</strong></summary>
 <br>
 
 Both Airportitlwm kexts for Big Sur and Monterey are installed in the kext folder. I have renamed the files to make them easier to identify but they can both be found [here](https://github.com/OpenIntelWireless/itlwm/releases) if you wish to download your own. The `Big Sur kext is enabled by default` but you can change that easily in the config.plist file under Kernel. **Be sure to have only one enabled.**
+
+**NOTE:** There are still some issues with Bluetooth and Wifi on Monterey [see here](https://github.com/seven-of-eleven/Lenovo-ThinkPad-L13-Yoga-Hackintosh/issues/11).
 
 </details>  
 
