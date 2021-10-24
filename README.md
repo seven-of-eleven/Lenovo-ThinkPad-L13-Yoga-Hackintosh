@@ -4,8 +4,8 @@
 
 <img align="right" src="./Other/README_Resources/l13-yoga2.png" alt="L13 Yoga macOS" width="430">
 
-[![OpenCore](https://img.shields.io/badge/OpenCore-0.7.3-blue.svg)](https://github.com/acidanthera/OpenCorePkg)
-[![macOS-Unstable](https://img.shields.io/badge/macOS-11.5.2-brightgreen.svg)](https://www.apple.com/macos/big-sur)
+[![OpenCore](https://img.shields.io/badge/OpenCore-0.7.4-blue.svg)](https://github.com/acidanthera/OpenCorePkg)
+[![macOS-Unstable](https://img.shields.io/badge/macOS-11.6-brightgreen.svg)](https://www.apple.com/macos/big-sur)
 
 **DISCLAIMER:**
 As you embark on your Hackintosh journey you are encouraged to **READ** the entire README and [Dortania](https://dortania.github.io/getting-started/) guides before you start. It will save many a message instructing you to RTFM. **I am not an expert**, I haven't forced you to do anything, put on your big boy pants and take responsibility for any mess you get yourself into.
@@ -113,8 +113,8 @@ It should work and your ThinkPad L13 Yoga should boot and work fine. **You will 
 
 | Component     | Version |
 | ------------- | ------- |
-| macOS Big Sur | 11.5.2  |
-| OpenCore      | v0.7.3* |
+| macOS Big Sur | 11.6    |
+| OpenCore      | v0.7.4* |
 
 `*Prior to OpenCore 0.6.7 MacOS would not boot on this computer.`
 
@@ -143,11 +143,11 @@ It should work and your ThinkPad L13 Yoga should boot and work fine. **You will 
 | Kext                   | Version |
 | :--------------------- | ------- |
 | AirportItlwm           | 2.0.0   |
-| AppleALC               | 1.6.4   |
+| AppleALC               | 1.6.5   |
 | BrightnessKeys         | 1.0.2   |
 | CPUFriend              | 1.2.4   |
-| IntelBluetoothFirmware | 2.0.0   |
-| IntelBluetoothInjector | 2.0.0   |
+| IntelBluetoothFirmware | 2.0.1   |
+| IntelBluetoothInjector | 2.0.1   |
 | IntelMausi             | 1.0.7   |
 | Lilu                   | 1.5.6   |
 | SMCBatteryManager      | 1.2.7   |
@@ -157,8 +157,8 @@ It should work and your ThinkPad L13 Yoga should boot and work fine. **You will 
 | VirtualSMC             | 1.2.7   |
 | VoodooI2C              | 2.6.5   |
 | VoodooI2CHID           | 2.6.5   |
-| VoodooPS2Controller    | 2.2.5   |
-| WhateverGreen          | 1.5.3   |
+| VoodooPS2Controller    | 2.2.6   |
+| WhateverGreen          | 1.5.4   |
 | YogaSMC                | 1.5.1   |
 
 </details>
@@ -171,7 +171,7 @@ It should work and your ThinkPad L13 Yoga should boot and work fine. **You will 
 |     Driver      | Version           |
 | :-------------: | ----------------- |
 |   HfsPlus.efi   | OcBinaryData      |
-| OpenRuntime.efi | OpenCorePkg 0.7.3 |
+| OpenRuntime.efi | OpenCorePkg 0.7.4 |
 
 </details>
 
