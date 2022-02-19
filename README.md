@@ -4,8 +4,8 @@
 
 <img align="right" src="./Other/README_Resources/l13-yoga2.png" alt="L13 Yoga macOS" width="430">
 
-[![OpenCore](https://img.shields.io/badge/OpenCore-0.7.4-blue.svg)](https://github.com/acidanthera/OpenCorePkg)
-[![macOS-Unstable](https://img.shields.io/badge/macOS-11.6.1-brightgreen.svg)](https://www.apple.com/macos/big-sur)
+[![OpenCore](https://img.shields.io/badge/OpenCore-0.7.8-blue.svg)](https://github.com/acidanthera/OpenCorePkg)
+[![macOS-Unstable](https://img.shields.io/badge/macOS-12.2.1-brightgreen.svg)](https://www.apple.com/macos/big-sur)
 
 **DISCLAIMER:**
 As you embark on your Hackintosh journey you are encouraged to **READ** the entire README and [Dortania](https://dortania.github.io/getting-started/) guides before you start. It will save many a message instructing you to RTFM. **I am not an expert**, I haven't forced you to do anything, put on your big boy pants and take responsibility for any mess you get yourself into.
@@ -111,10 +111,10 @@ It should work and your ThinkPad L13 Yoga should boot and work fine. **You will 
 <br>
 
 
-| Component     | Version |
-| ------------- | ------- |
-| macOS Big Sur | 11.6    |
-| OpenCore      | v0.7.4* |
+| Component      | Version |
+| -------------- | ------- |
+| macOS Monterey | 12.2.1  |
+| OpenCore       | v0.7.8* |
 
 `*Prior to OpenCore 0.6.7 MacOS would not boot on this computer.`
 
@@ -142,26 +142,28 @@ It should work and your ThinkPad L13 Yoga should boot and work fine. **You will 
 
 | Kext                   | Version |
 | :--------------------- | ------- |
-| AirportItlwm           | 2.0.0   |
-| AppleALC               | 1.6.5   |
+| AirportItlwm           | 2.1.0   |
+| AppleALC               | 1.6.9   |
 | BrightnessKeys         | 1.0.2   |
 | CPUFriend              | 1.2.4   |
-| IntelBluetoothFirmware | 2.0.1   |
-| IntelBluetoothInjector | 2.0.1   |
+| IntelBluetoothFirmware | 2.1.0   |
+| BlueToolFixup.kext     | 2.6.1   |
 | IntelMausi             | 1.0.7   |
-| Lilu                   | 1.5.6   |
-| SMCBatteryManager      | 1.2.7   |
-| SMCProcessor           | 1.2.7   |
-| SMCSuperIO             | 1.2.7   |
+| Lilu                   | 1.6.0   |
+| Sinetek-rtsx           | 9.0     |
+| SMCBatteryManager      | 1.2.8   |
+| SMCProcessor           | 1.2.8   |
+| SMCSuperIO             | 1.2.8   |
 | USBMap                 | 1.0.0   |
-| VirtualSMC             | 1.2.7   |
+| VirtualSMC             | 1.2.8   |
 | VoodooI2C              | 2.6.5   |
 | VoodooI2CHID           | 2.6.5   |
 | VoodooPS2Controller    | 2.2.6   |
-| WhateverGreen          | 1.5.4   |
+| WhateverGreen          | 1.5.7   |
 | YogaSMC                | 1.5.1   |
 
 </details>
+
 <details>
   <summary><strong>UEFI drivers</strong></summary>
 <br>
@@ -170,8 +172,8 @@ It should work and your ThinkPad L13 Yoga should boot and work fine. **You will 
 
 |     Driver      | Version           |
 | :-------------: | ----------------- |
-|   HfsPlus.efi   | OcBinaryData      |
-| OpenRuntime.efi | OpenCorePkg 0.7.4 |
+|   HfsPlus.efi   | 1.0.0             |
+| OpenRuntime.efi | OpenCorePkg 0.7.8 |
 
 </details>
 
@@ -179,9 +181,10 @@ It should work and your ThinkPad L13 Yoga should boot and work fine. **You will 
     <summary><strong>Screenshot</strong></summary>
     <br>
     <p float="left">
-        <img src="./Other/README_Resources/ScreenShot1.png" alt="BigSur" width="427">
+        <img src="./Other/README_Resources/ScreenShot1.png" alt="Monterey" width="427">
     </p>
 </details> 
+
 
 
 
@@ -257,9 +260,7 @@ It is set to English but you can find alternatives here:
 <summary><strong>Big Sur or Monterey</strong></summary>
 <br>
 
-Both Airportitlwm kexts for Big Sur and Monterey are installed in the kext folder. I have renamed the files to make them easier to identify but they can both be found [here](https://github.com/OpenIntelWireless/itlwm/releases) if you wish to download your own. The `Big Sur kext is enabled by default` but you can change that easily in the config.plist file under Kernel. **Be sure to have only one enabled.**
-
-**NOTE:** There are still some issues with Bluetooth and Wifi on Monterey [see here](https://github.com/seven-of-eleven/Lenovo-ThinkPad-L13-Yoga-Hackintosh/issues/11).
+The EFI folder is setup for Monterey, but you can change that easily by changing the AirportItlwm and Bluetooth kexts, and updating the config.plist.
 
 </details>  
 
@@ -348,13 +349,14 @@ The L13 Yoga has CX8070 for audio which requires the boot-arg **or** device prop
 - [x] Multi-Touch Screen `Pen also working`
 - [x] Graphical Boot menu `OpenCanopy (It does work. Not included in OC folder as I generally skip the boot menu.)` 
 - [x] HDMI
+- [x] SD Card reader
 
 </details>  
 
 <details>  
 <summary><strong>What's not working ⚠️</strong></summary>
 
-- [ ] Fingerprint reader - `While there is finally a working driver for Linux (python-validity), don't expect macOS driver any time soon.`
+- [ ] Fingerprint reader - `Don't expect macOS driver any time soon.`
 - [ ] Samsung PM 981 NVME drive - `Still unstable. Could work for some, not for others.`
 
 </details>  
@@ -363,9 +365,10 @@ The L13 Yoga has CX8070 for audio which requires the boot-arg **or** device prop
 <summary><strong>Untested</strong></summary>
 
 - [ ] Boot chime (should work I just haven't tried it)
-- [ ] FileVault 2
+- [ ] FileVault
 - [ ] Sidecar wired
 - [ ] Sidecar wireless
 - [ ] Windows/Linux from OC boot menu`I'm not dual booting my system but there's no reason it shouldn't work.`
 
 </details> 
+
