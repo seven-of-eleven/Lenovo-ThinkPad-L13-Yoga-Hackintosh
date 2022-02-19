@@ -282,9 +282,11 @@ I used these methods prior to adding the SSDT-OCBAT1-lenovoPRO13.aml from [hagen
 <details>  
 <summary><strong>Generate your own SMBIOS</strong></summary>
 <br>
-[GenSMBIOS](https://github.com/corpnewt/GenSMBIOS)
 
-Use GenSMBIOS to create your own serial #... based off of your preferred model.
+
+
+
+Use [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS) to create your own serial #... based off of your preferred model.
 
 - MacBookPro16,3 -`What I used`
 
