@@ -360,6 +360,7 @@ The L13 Yoga has CX8070 for audio which requires the boot-arg **or** device prop
 
 - [ ] Fingerprint reader - `Don't expect macOS driver any time soon.`
 - [ ] Samsung PM 981 NVME drive - `Still unstable. Could work for some, not for others.`
+- [ ] Intel Optane - `It causes Kernel Panic in boot`
 
 </details>  
 
