@@ -6,7 +6,6 @@
 
 [![OpenCore](https://img.shields.io/badge/OpenCore-0.8.2-blue.svg)](https://github.com/acidanthera/OpenCorePkg)
 [![macOS-Unstable](https://img.shields.io/badge/macOS-12.4-brightgreen.svg)](https://www.apple.com/macos/monterey)
-
 [![macOS-Unstable](https://img.shields.io/badge/macOS-11.6.7-brightgreen.svg)](https://www.apple.com)
 
 **DISCLAIMER:**
