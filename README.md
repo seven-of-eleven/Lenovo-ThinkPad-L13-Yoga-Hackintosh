@@ -300,7 +300,7 @@ Use [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS) to create your own serial
 <summary><strong>CPUFriend power management</strong></summary>
 <br>
 
-Generate `CPUFriendDataProvider` or `ssdt_data.aml` (choose one) for your machine [here](https://github.com/fewtarius/CPUFriendFriend) or use the ssd_data.aml file provided. My files are set for power conservation over performance. Highly recommended that you use power management.
+Generate `CPUFriendDataProvider` or `ssdt_data.aml` (choose one) for your machine [here](https://github.com/acidanthera/CPUFriend) or use the ssd_data.aml file provided. My files are set for power conservation over performance. Highly recommended that you use power management.
 
 </details>  
 
