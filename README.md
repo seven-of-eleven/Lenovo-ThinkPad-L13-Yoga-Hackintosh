@@ -4,12 +4,10 @@
 
 <img align="right" src="./Other/README_Resources/l13-yoga2.png" alt="L13 Yoga macOS" width="430">
 
-[![OpenCore](https://img.shields.io/badge/OpenCore-0.8.2-blue.svg)](https://github.com/acidanthera/OpenCorePkg)
-[![macOS-Unstable](https://img.shields.io/badge/macOS-12.4-brightgreen.svg)](https://www.apple.com/macos/monterey)
-[![macOS-Unstable](https://img.shields.io/badge/macOS-11.6.7-brightgreen.svg)](https://www.apple.com)
+[![OpenCore](https://img.shields.io/badge/OpenCore-0.8.3-blue.svg)](https://github.com/acidanthera/OpenCorePkg)
+[![macOS-Unstable](https://img.shields.io/badge/macOS-12.5-brightgreen.svg)](https://www.apple.com/macos/monterey)[![macOS-Unstable](https://img.shields.io/badge/macOS-11.6.8-brightgreen.svg)](https://www.apple.com)[![macOS-Unstable](https://img.shields.io/badge/macOS-13.0-yellow.svg)](https://www.apple.com/ca/macos/macos-ventura-preview/)
 
-**DISCLAIMER:**
-As you embark on your Hackintosh journey you are encouraged to **READ** the entire README and [Dortania](https://dortania.github.io/getting-started/) guides before you start. It will save many a message instructing you to RTFM. **I am not an expert**, I haven't forced you to do anything, put on your big boy pants and take responsibility for any mess you get yourself into.
+**DISCLAIMER:**As you embark on your Hackintosh journey you are encouraged to **READ** the entire README and [Dortania](https://dortania.github.io/getting-started/) guides before you start, or check out some [Youtube videos](https://www.youtube.com/c/TechNolli) to get an understanding of the install process. It will save many a message instructing you to read the manual. **I am not an expert**, I haven't forced you to do anything, so put on your big boy pants and take responsibility for any mess you get yourself into.
 
 With that said I'm happy to help when/where I can. When you encounter bug or want to improve this repo, consider opening an issue or pull request. You can also find a wealth of knowledge on [Reddit](https://www.reddit.com/r/hackintosh/), [TonyMacX86](https://www.tonymacx86.com) or [Google](https://www.google.com).
 
@@ -17,6 +15,7 @@ With that said I'm happy to help when/where I can. When you encounter bug or wan
 
 <details> 
 <summary><strong>This is not a guide!</strong></summary>
+
 
 This is not a guide. It shoud only be used as a reference. I provide some tips and tricks I learned on my journey in building a hackintosh. The best way of using this is as a supplement to the OpenCore guide; if you have questions about how to setup your specific hardware, are unclear about what to do, or would like to see the settings I've used.
 
@@ -37,7 +36,7 @@ It should work and your ThinkPad L13 Yoga should boot and work fine. **You will 
 > 2. Ensure the value of `showpicker` is  `true` in the config.plist file to provide the opencore menu when booting. 
 > 3. Prepare your install [USB](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/)
 > 4. Move the entire EFI folder (with your modifications) to the proper partition on your [USB](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/mac-install.html#setting-up-opencore-s-efi-environment) (or [hard drive](https://dortania.github.io/OpenCore-Post-Install/universal/oc2hdd.html) once the install is complete).
-> 5. [Install](https://dortania.github.io/OpenCore-Install-Guide/installation/installation-process.html#double-checking-your-work) - You'll need to select F12 to get the boot menu options and **boot from the USB each time the computer restarts** until you've copied the EFI folder onto the hard drive. You may also need to select the correct boot option during install.
+> 5. [Install](https://dortania.github.io/OpenCore-Install-Guide/installation/installation-process.html#double-checking-your-work) - You'll need to select <kbd>F12</kbd> to get the boot menu options and **boot from the USB each time the computer restarts** until you've copied the EFI folder onto the hard drive. You may also need to select the correct boot option during install.
 
 </details>  
 
@@ -45,15 +44,15 @@ It should work and your ThinkPad L13 Yoga should boot and work fine. **You will 
 <summary><strong>This is a guide!</strong></summary>
 
 
-- To install macOS follow the guides provided by [Dortania](https://dortania.github.io/OpenCore-Install-Guide/)
-- Useful tools by [CorpNewt](https://github.com/corpnewt) and [headkaze](https://github.com/headkaze/Hackintool)
+To install macOS follow the guides provided by [Dortania](https://dortania.github.io/OpenCore-Install-Guide/) 🤔
 
 </details>  
 
 <details> 
 <summary><strong>Shout out and credits</strong></summary>
 
-**Shout out** to [oddish_enthusiast](https://www.reddit.com/user/oddish_enthusiast/) who pointed me in the right direction and let me know when OpenCore 0.6.7 fixed booting on 10th gen processors. (He actually had it working before that).
+
+**Shout out** to [oddish_enthusiast](https://www.reddit.com/user/oddish_enthusiast/) who pointed me in the right direction and let me know when OpenCore 0.6.7 fixed booting on 10^th^ gen processors. (He actually had it working before that).
 
 **Shout out** to[DAlexis74](https://github.com/DAlexis74) for the DevicesProperties patches to enable HDMI.
 
@@ -68,6 +67,7 @@ It should work and your ThinkPad L13 Yoga should boot and work fine. **You will 
 - [Mieze](https://github.com/Mieze) for [IntelMausiEthernet](https://github.com/Mieze/IntelMausiEthernet)
 - [OpenIntelWireless](https://github.com/OpenIntelWireless/IntelBluetoothFirmware/releases) for [IntelBluetoothFirmware](https://github.com/OpenIntelWireless/IntelBluetoothFirmware)
 - [zhen-zen](https://github.com/zhen-zen) for [YogaSMC](https://github.com/zhen-zen/YogaSMC)
+- Useful tools by [CorpNewt](https://github.com/corpnewt) and [headkaze](https://github.com/headkaze/Hackintool)
 - And every other contributor
 - People at [r/hackintosh](https://www.reddit.com/r/hackintosh/) for their advice and help
 
@@ -115,8 +115,8 @@ It should work and your ThinkPad L13 Yoga should boot and work fine. **You will 
 
 | Component      | Version |
 | -------------- | ------- |
-| macOS Monterey | 12.4    |
-| OpenCore       | v0.8.2* |
+| macOS Monterey | 12.5    |
+| OpenCore       | v0.8.3* |
 
 `*Prior to OpenCore 0.6.7 MacOS would not boot on this computer.`
 
@@ -145,23 +145,23 @@ It should work and your ThinkPad L13 Yoga should boot and work fine. **You will 
 | Kext                   | Version |
 | :--------------------- | ------- |
 | AirportItlwm           | 2.1.0   |
-| AppleALC               | 1.7.3   |
+| AppleALC               | 1.7.4   |
 | BrightnessKeys         | 1.0.2   |
 | CPUFriend              | 1.2.6   |
 | IntelBluetoothFirmware | 2.1.0   |
 | BlueToolFixup.kext     | 2.6.3   |
 | IntelMausi             | 1.0.7   |
-| Lilu                   | 1.6.1   |
+| Lilu                   | 1.6.2   |
 | Sinetek-rtsx           | 9.0     |
 | SMCBatteryManager      | 1.3.0   |
 | SMCProcessor           | 1.3.0   |
 | SMCSuperIO             | 1.3.0   |
 | USBMap                 | 1.0.0   |
 | VirtualSMC             | 1.3.0   |
-| VoodooI2C              | 2.7.0   |
-| VoodooI2CHID           | 2.7.0   |
+| VoodooI2C              | 2.6.5   |
+| VoodooI2CHID           | 2.6.5   |
 | VoodooPS2Controller    | 2.2.9   |
-| WhateverGreen          | 1.6.0   |
+| WhateverGreen          | 1.6.1   |
 | YogaSMC                | 1.5.1   |
 
 </details>
@@ -172,10 +172,11 @@ It should work and your ThinkPad L13 Yoga should boot and work fine. **You will 
 
 
 
-|     Driver      | Version           |
-| :-------------: | ----------------- |
-|   HfsPlus.efi   | 1.0.0             |
-| OpenRuntime.efi | OpenCorePkg 0.8.2 |
+|       Driver        | Version           |
+| :-----------------: | ----------------- |
+|     HfsPlus.efi     | 1.0.0             |
+|   OpenRuntime.efi   | OpenCorePkg 0.8.3 |
+| ResetNvramEntry.efi | OpenCorePkg 0.8.3 |
 
 </details>
 
@@ -188,13 +189,12 @@ It should work and your ThinkPad L13 Yoga should boot and work fine. **You will 
 </details> 
 
 
-
-
 ## Before installation
 
 <details>  
 <summary><strong>UEFI settings</strong></summary>
 <br>
+
 
 **Config**
 
@@ -259,10 +259,14 @@ It is set to English but you can find alternatives here:
 </details>
 
 <details>  
-<summary><strong>Big Sur or Monterey</strong></summary>
+<summary><strong>Big Sur, Monterey, or Ventura</strong></summary>
 <br>
 
-The EFI folder is setup for both Monterey and BigSur. I used `MinKernel` and `MaxKernel` values in the config.plist to load the proper kexts based on which OS you are installing. I tested it with Monterey, so let me know if you have issues with BigSur.
+
+
+The EFI folder is setup for both Monterey and BigSur. It should also work with [Ventura](https://github.com/seven-of-eleven/Lenovo-ThinkPad-L13-Yoga-Hackintosh/issues/17). I used `MinKernel` and `MaxKernel` values in the config.plist to load the proper kexts based on which OS you are installing.
+
+I'm primarily using this EFI with Monterey 12.5 at the moment. Let me know if you have issues with BigSur.
 
 </details>  
 
@@ -286,8 +290,6 @@ I used these methods prior to adding the SSDT-OCBAT1-lenovoPRO13.aml from [hagen
 <br>
 
 
-
-
 Use [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS) to create your own serial #... based off of your preferred model.
 
 - MacBookPro16,3 -`What I used`
@@ -299,6 +301,7 @@ Use [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS) to create your own serial
 <details>  
 <summary><strong>CPUFriend power management</strong></summary>
 <br>
+
 
 Generate `CPUFriendDataProvider` or `ssdt_data.aml` (choose one) for your machine [here](https://github.com/acidanthera/CPUFriend) or use the ssd_data.aml file provided. My files are set for power conservation over performance. Highly recommended that you use power management.
 
@@ -316,6 +319,9 @@ While first port mapping I followed the [Dortania  guide here](https://dortania.
 <details>  
 <summary><strong>Audio Setup</strong></summary>
 <br>
+
+
+
 The L13 Yoga has CX8070 for audio which requires the boot-arg **or** device property below. You can use the boot-args to initially setup your config.plist file as suggested in the guide or simply add the device property. Everything should work, built-in microphone, speakers, headphone jack and microphone. 
 
 NVRAM:
@@ -338,6 +344,8 @@ DeviceProperties
 <details>  
 <summary><strong>What's working ✅</strong></summary>
 
+
+
 - [x] Battery percentage
 - [x] Bluetooth - Intel Wireless-AC 9560 
 - [x] Wifi - Intel Wireless-AC 9560
@@ -346,7 +354,7 @@ DeviceProperties
 - [x] iMessage, FaceTime, App Store, iTunes Store. `Generate your own SMBIOS`
 - [x] Intel I219-V Ethernet port -`works with the Lenovo dongle`
 - [x] Keyboard `Volume and brightness hotkeys, with YogaSMC and BrightnessKey kexts`
-- [x]  Audio - Conexant CX8070 -`"alcid=15" - or see setup above`
+- [x] Audio - Conexant CX8070 -`"alcid=15" - or see setup above`
 - [x] Microphone
 - [x] Sleep/Wake 
 - [x] TrackPoint  `Works perfectly. Just like on Windows or Linux.`
@@ -363,6 +371,8 @@ DeviceProperties
 <details>  
 <summary><strong>What's not working ⚠️</strong></summary>
 
+
+
 - [ ] Fingerprint reader - `No. Don't expect macOS driver any time soon.`
 - [ ] Samsung PM 981 NVME drive - `Still unstable. Could work for some, not for others.`
 - [ ] Intel Optane - `It causes Kernel Panic in boot` (see [issue #14](https://github.com/seven-of-eleven/Lenovo-ThinkPad-L13-Yoga-Hackintosh/issues/14))
@@ -371,6 +381,8 @@ DeviceProperties
 
 <details>  
 <summary><strong>Untested</strong></summary>
+
+
 
 - [ ] Boot chime (should work I just haven't tried it)
 - [ ] FileVault (should work I just haven't tried it)
