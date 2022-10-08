@@ -4,8 +4,8 @@
 
 <img align="right" src="./Other/README_Resources/l13-yoga2.png" alt="L13 Yoga macOS" width="430">
 
-[![OpenCore](https://img.shields.io/badge/OpenCore-0.8.3-blue.svg)](https://github.com/acidanthera/OpenCorePkg)
-[![macOS-Unstable](https://img.shields.io/badge/macOS-12.5-brightgreen.svg)](https://www.apple.com/macos/monterey)[![macOS-Unstable](https://img.shields.io/badge/macOS-11.6.8-brightgreen.svg)](https://www.apple.com)[![macOS-Unstable](https://img.shields.io/badge/macOS-13.0-yellow.svg)](https://www.apple.com/ca/macos/macos-ventura-preview/)
+[![OpenCore](https://img.shields.io/badge/OpenCore-0.8.5-blue.svg)](https://github.com/acidanthera/OpenCorePkg)
+[![macOS-Unstable](https://img.shields.io/badge/macOS-12.6-brightgreen.svg)](https://www.apple.com/macos/monterey)[![macOS-Unstable](https://img.shields.io/badge/macOS-11.7-brightgreen.svg)](https://www.apple.com)[![macOS-Unstable](https://img.shields.io/badge/macOS-13.0-yellow.svg)](https://www.apple.com/ca/macos/macos-ventura-preview/)
 
 **DISCLAIMER:**As you embark on your Hackintosh journey you are encouraged to **READ** the entire README and [Dortania](https://dortania.github.io/getting-started/) guides before you start, or check out some [Youtube videos](https://www.youtube.com/c/TechNolli) to get an understanding of the install process. It will save many a message instructing you to read the manual. **I am not an expert**, I haven't forced you to do anything, so put on your big boy pants and take responsibility for any mess you get yourself into.
 
@@ -55,6 +55,8 @@ To install macOS follow the guides provided by [Dortania](https://dortania.githu
 **Shout out** to [oddish_enthusiast](https://www.reddit.com/user/oddish_enthusiast/) who pointed me in the right direction and let me know when OpenCore 0.6.7 fixed booting on 10^th^ gen processors. (He actually had it working before that).
 
 **Shout out** to[DAlexis74](https://github.com/DAlexis74) for the DevicesProperties patches to enable HDMI.
+
+**Shout out** to [alexjaixd](https://github.com/alexjaixd) for enabling Built-in SmartCard Reader #20
 
 ### Credit to all these great people whom I don't know but have made my hackintosh dreams come true:
 
@@ -115,8 +117,8 @@ To install macOS follow the guides provided by [Dortania](https://dortania.githu
 
 | Component      | Version |
 | -------------- | ------- |
-| macOS Monterey | 12.5    |
-| OpenCore       | v0.8.3* |
+| macOS Monterey | 12.6    |
+| OpenCore       | v0.8.5* |
 
 `*Prior to OpenCore 0.6.7 MacOS would not boot on this computer.`
 
@@ -145,22 +147,22 @@ To install macOS follow the guides provided by [Dortania](https://dortania.githu
 | Kext                   | Version |
 | :--------------------- | ------- |
 | AirportItlwm           | 2.1.0   |
-| AppleALC               | 1.7.4   |
+| AppleALC               | 1.7.5   |
 | BrightnessKeys         | 1.0.2   |
 | CPUFriend              | 1.2.6   |
-| IntelBluetoothFirmware | 2.1.0   |
-| BlueToolFixup.kext     | 2.6.3   |
+| IntelBluetoothFirmware | 2.2.0   |
+| BlueToolFixup.kext     | 2.6.4   |
 | IntelMausi             | 1.0.7   |
 | Lilu                   | 1.6.2   |
 | Sinetek-rtsx           | 9.0     |
 | SMCBatteryManager      | 1.3.0   |
 | SMCProcessor           | 1.3.0   |
 | SMCSuperIO             | 1.3.0   |
-| USBMap                 | 1.0.0   |
+| USBMap                 | 1.0.1   |
 | VirtualSMC             | 1.3.0   |
 | VoodooI2C              | 2.6.5   |
 | VoodooI2CHID           | 2.6.5   |
-| VoodooPS2Controller    | 2.2.9   |
+| VoodooPS2Controller    | 2.3.1   |
 | WhateverGreen          | 1.6.1   |
 | YogaSMC                | 1.5.1   |
 
@@ -175,8 +177,8 @@ To install macOS follow the guides provided by [Dortania](https://dortania.githu
 |       Driver        | Version           |
 | :-----------------: | ----------------- |
 |     HfsPlus.efi     | 1.0.0             |
-|   OpenRuntime.efi   | OpenCorePkg 0.8.3 |
-| ResetNvramEntry.efi | OpenCorePkg 0.8.3 |
+|   OpenRuntime.efi   | OpenCorePkg 0.8.5 |
+| ResetNvramEntry.efi | OpenCorePkg 0.8.5 |
 
 </details>
 
@@ -264,9 +266,9 @@ It is set to English but you can find alternatives here:
 
 
 
-The EFI folder is setup for both Monterey and BigSur. It should also work with [Ventura](https://github.com/seven-of-eleven/Lenovo-ThinkPad-L13-Yoga-Hackintosh/issues/17). I used `MinKernel` and `MaxKernel` values in the config.plist to load the proper kexts based on which OS you are installing.
+The EFI folder is setup for both Monterey and Big Sur. It kinda works with [Ventura](https://github.com/seven-of-eleven/Lenovo-ThinkPad-L13-Yoga-Hackintosh/issues/17) but there are still some issues so YMMV. I used `MinKernel` and `MaxKernel` values in the config.plist to load the proper kexts based on which OS is being used.
 
-I'm primarily using this EFI with Monterey 12.5 at the moment. Let me know if you have issues with BigSur.
+I'm primarily using this EFI with Monterey 12.6 at the moment. Let me know if you have issues with Big Sur.
 
 </details>  
 
@@ -312,7 +314,7 @@ Generate `CPUFriendDataProvider` or `ssdt_data.aml` (choose one) for your machin
 <br>
 
 
-While first port mapping I followed the [Dortania  guide here](https://dortania.github.io/OpenCore-Post-Install/usb/#macos-and-the-15-port-limit) with USBInjectAll.kext install...  when doing so the internal USB ports did not show up and the cameras, touch screen, and bluetooth did not function. I noticed on the `USBmap tool` screen that RHUB was showing so I Googled it and it brought me back to the [Dortania guide here](https://dortania.github.io/OpenCore-Post-Install/usb/manual/manual.html#special-notes). I added the SSDT-RHUB.aml to the APCI folder rebooted and all the ports showed up. I then mapped the USB ports creating the included USBMap.kext file. After mapping the ports I left the SSDT-RHUB.aml file in the APCI folder (not sure if it is still needed?).
+While first port mapping I followed the [Dortania guide here](https://dortania.github.io/OpenCore-Post-Install/usb/#macos-and-the-15-port-limit) with USBInjectAll.kext install...  when doing so the internal USB ports did not show up and the cameras, touch screen, and bluetooth did not function. I noticed on the `USBmap tool` screen that RHUB was showing so I Googled it and it brought me back to the [Dortania guide here](https://dortania.github.io/OpenCore-Post-Install/usb/manual/manual.html#special-notes). I added the SSDT-RHUB.aml to the APCI folder rebooted and all the ports showed up. I then mapped the USB ports creating the included USBMap.kext file. After mapping the ports I left the SSDT-RHUB.aml file in the APCI folder (not sure if it is still needed?).
 
 </details>  
 
@@ -365,6 +367,7 @@ DeviceProperties
 - [x] Graphical Boot menu `OpenCanopy (It does work. Not included in OC folder as I generally skip the boot menu.)` 
 - [x] HDMI
 - [x] SD Card reader
+- [x] SmartCard Reader `not available on all units`
 
 </details>  
 
@@ -384,8 +387,8 @@ DeviceProperties
 
 
 
-- [ ] Boot chime (should work I just haven't tried it)
-- [ ] FileVault (should work I just haven't tried it)
+- [ ] Boot chime `should work I just haven't tried it`
+- [ ] FileVault `should work I just haven't tried it`
 - [ ] Sidecar wired
 - [ ] Sidecar wireless
 - [ ] Windows/Linux from OC boot menu`I'm not dual booting my system but there's no reason it shouldn't work.`
