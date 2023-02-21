@@ -293,7 +293,7 @@ The EFI folder is setup for both Monterey and Ventura. I used `MinKernel` and `M
 
 1. To use the stylus you need VoodooI2C-2.6.5 (last version where stylus was working). I still haven't had time to examine this fully. Unfortunately this creates kernel panics when shutting down or rebooting in Ventura.
 2. When shutting down Ventura with VoodooI2C-2.6.5 kexts installed the computer reboots.
-3. If you upgrade to newer version of VooVoodooI2C then Ventura works (touch works with finger) but the stylus doesn't.
+3. If you upgrade to newer version of VoodooI2C then Ventura works (touch works with finger) but the stylus doesn't.
 
 > I'm primarily using this EFI with Monterey 12.6.3 at the moment.
 
