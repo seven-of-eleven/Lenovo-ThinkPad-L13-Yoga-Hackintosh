@@ -4,14 +4,15 @@
 
 <img align="right" src="./Other/README_Resources/l13-yoga2.png" alt="L13 Yoga macOS" width="430">
 
-[![OpenCore](https://img.shields.io/badge/OpenCore-0.8.5-blue.svg)](https://github.com/acidanthera/OpenCorePkg)
-[![macOS-Unstable](https://img.shields.io/badge/macOS-12.6-brightgreen.svg)](https://www.apple.com/macos/monterey)[![macOS-Unstable](https://img.shields.io/badge/macOS-11.7-brightgreen.svg)](https://www.apple.com)[![macOS-Unstable](https://img.shields.io/badge/macOS-13.0-yellow.svg)](https://www.apple.com/ca/macos/macos-ventura-preview/)
+[![OpenCore](https://img.shields.io/badge/OpenCore-0.8.9-blue.svg)](https://github.com/acidanthera/OpenCorePkg) [![macOS-Unstable](https://img.shields.io/badge/macOS-12.6.3-brightgreen.svg)](https://www.apple.com/macos/monterey) [![macOS-Unstable](https://img.shields.io/badge/macOS-13.2-yellow.svg)](https://www.apple.com/ca/macos/macos-ventura-preview/)
 
 **DISCLAIMER:**As you embark on your Hackintosh journey you are encouraged to **READ** the entire README and [Dortania](https://dortania.github.io/getting-started/) guides before you start, or check out some [Youtube videos](https://www.youtube.com/c/TechNolli) to get an understanding of the install process. It will save many a message instructing you to read the manual. **I am not an expert**, I haven't forced you to do anything, so put on your big boy pants and take responsibility for any mess you get yourself into.
 
 With that said I'm happy to help when/where I can. When you encounter bug or want to improve this repo, consider opening an issue or pull request. You can also find a wealth of knowledge on [Reddit](https://www.reddit.com/r/hackintosh/), [TonyMacX86](https://www.tonymacx86.com) or [Google](https://www.google.com).
 
 ## Introduction
+
+⚠️ Still issues with Ventura ⚠️ - see `Monterey or Ventura` below.
 
 <details> 
 <summary><strong>This is not a guide!</strong></summary>
@@ -38,6 +39,8 @@ It should work and your ThinkPad L13 Yoga should boot and work fine. **You will 
 > 4. Move the entire EFI folder (with your modifications) to the proper partition on your [USB](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/mac-install.html#setting-up-opencore-s-efi-environment) (or [hard drive](https://dortania.github.io/OpenCore-Post-Install/universal/oc2hdd.html) once the install is complete).
 > 5. [Install](https://dortania.github.io/OpenCore-Install-Guide/installation/installation-process.html#double-checking-your-work) - You'll need to select <kbd>F12</kbd> to get the boot menu options and **boot from the USB each time the computer restarts** until you've copied the EFI folder onto the hard drive. You may also need to select the correct boot option during install.
 
+
+
 </details>  
 
 <details> 
@@ -45,6 +48,8 @@ It should work and your ThinkPad L13 Yoga should boot and work fine. **You will 
 
 
 To install macOS follow the guides provided by [Dortania](https://dortania.github.io/OpenCore-Install-Guide/) 🤔
+
+
 
 </details>  
 
@@ -73,22 +78,26 @@ To install macOS follow the guides provided by [Dortania](https://dortania.githu
 - And every other contributor
 - People at [r/hackintosh](https://www.reddit.com/r/hackintosh/) for their advice and help
 
+
+
 </details>
 
 <details>
 <summary><strong> Other Repositories </strong></summary>
-<br>
+
 
 
 - ThinkPad L13 Yoga -hackintosh repositories:
   - [hagenest/thinkpad-l13-yoga-hackintosh](https://github.com/hagenest/thinkpad-l13-yoga-hackintosh)
   - [Faridmau/hackintosh-Thinkpad-L13](https://github.com/faridmau/hackintosh-Thinkpad-L13)
 
-</details>  
+
+
+</details>
 
 <details>
 <summary><strong>Hardware</strong></summary>
-<br>
+
 
 
 [![UEFI](https://img.shields.io/badge/UEFI-R15ET44W-lightgrey)](https://pcsupport.lenovo.com/ca/en/products/laptops-and-netbooks/thinkpad-l-series-laptops/thinkpad-l13-yoga-type-20r5-20r6/downloads/ds541927-bios-update-utility-bootable-cd-for-windows-10-64-bit-thinkpad-l13-l13-yoga)
@@ -108,25 +117,29 @@ To install macOS follow the guides provided by [Dortania](https://dortania.githu
 | Wifi & BT | Intel Wireless-AC 9560                               | Use AirportItlwm for your macOS version and enjoy native Wi-Fi control. |
 | Input     | PS2 Keyboard & I2CHID TrackPad (touchscreen and pen) | I'm using [YogaSMC](https://github.com/zhen-zen/YogaSMC) for media keys. The kext is in the folder but **you'll need to install the app.** |
 
-</details>  
+
+
+</details>
 
 <details>
 <summary><strong>Main software</strong></summary>
-<br>
+
 
 
 | Component      | Version |
 | -------------- | ------- |
-| macOS Monterey | 12.6    |
-| OpenCore       | v0.8.5* |
+| macOS Monterey | 12.6.3  |
+| OpenCore       | v0.8.9* |
 
 `*Prior to OpenCore 0.6.7 MacOS would not boot on this computer.`
+
+
 
 </details>
 
 <details>
 <summary><strong>ACPI Files</strong></summary>
-<br>
+
 
 | Component                   |
 | --------------------------- |
@@ -138,47 +151,54 @@ To install macOS follow the guides provided by [Dortania](https://dortania.githu
 | SSDT-RHUB.aml               |
 | SSDT-XOSI                   |
 
+
+
 </details>
 
 <details>
 <summary><strong>Kernel extensions</strong></summary>
-<br>
 
-| Kext                   | Version |
-| :--------------------- | ------- |
-| AirportItlwm           | 2.1.0   |
-| AppleALC               | 1.7.5   |
-| BrightnessKeys         | 1.0.2   |
-| CPUFriend              | 1.2.6   |
-| IntelBluetoothFirmware | 2.2.0   |
-| BlueToolFixup.kext     | 2.6.4   |
-| IntelMausi             | 1.0.7   |
-| Lilu                   | 1.6.2   |
-| Sinetek-rtsx           | 9.0     |
-| SMCBatteryManager      | 1.3.0   |
-| SMCProcessor           | 1.3.0   |
-| SMCSuperIO             | 1.3.0   |
-| USBMap                 | 1.0.1   |
-| VirtualSMC             | 1.3.0   |
-| VoodooI2C              | 2.6.5   |
-| VoodooI2CHID           | 2.6.5   |
-| VoodooPS2Controller    | 2.3.1   |
-| WhateverGreen          | 1.6.1   |
-| YogaSMC                | 1.5.1   |
+
+| Kext                    | Version       |
+| :---------------------- | ------------- |
+| AirportItlwm            | 2.1.0         |
+| AirportItlwmV (Ventura) | 2.2.0 - alpha |
+| AppleALC                | 1.7.9         |
+| BrightnessKeys          | 1.0.2         |
+| CPUFriend               | 1.2.6         |
+| IntelBluetoothFirmware  | 2.2.0         |
+| BlueToolFixup.kext      | 2.6.4         |
+| IntelMausi              | 1.0.7         |
+| Lilu                    | 1.6.3         |
+| Sinetek-rtsx            | 9.0           |
+| SMCBatteryManager       | 1.3.0         |
+| SMCProcessor            | 1.3.0         |
+| SMCSuperIO              | 1.3.0         |
+| USBMap                  | 1.0.1         |
+| VirtualSMC              | 1.3.0         |
+| VoodooI2C               | 2.6.5         |
+| VoodooI2CHID            | 2.6.5         |
+| VoodooPS2Controller     | 2.3.2         |
+| WhateverGreen           | 1.6.4         |
+| YogaSMC                 | 1.5.3         |
+
+
 
 </details>
 
 <details>
   <summary><strong>UEFI drivers</strong></summary>
-<br>
+
 
 
 
 |       Driver        | Version           |
 | :-----------------: | ----------------- |
 |     HfsPlus.efi     | 1.0.0             |
-|   OpenRuntime.efi   | OpenCorePkg 0.8.5 |
-| ResetNvramEntry.efi | OpenCorePkg 0.8.5 |
+|   OpenRuntime.efi   | OpenCorePkg 0.8.9 |
+| ResetNvramEntry.efi | OpenCorePkg 0.8.9 |
+
+
 
 </details>
 
@@ -195,7 +215,7 @@ To install macOS follow the guides provided by [Dortania](https://dortania.githu
 
 <details>  
 <summary><strong>UEFI settings</strong></summary>
-<br>
+
 
 
 **Config**
@@ -231,11 +251,13 @@ To install macOS follow the guides provided by [Dortania](https://dortania.githu
 - `CSM Support` **No**
 - `Boot Mode` **Diagnostics** (This can be changed to "Quick" once you know your system is running properly)
 
-</details>  
+
+
+</details>
 
 <details>
 <summary><strong>Own prev-lang-kbd</strong></summary>
-<br>
+
 
 
 In the config.plist file you set the default language as outlined in the guide. You can either add it as a string or as a hex data using [ProperTree](https://github.com/corpnewt/ProperTree)
@@ -258,17 +280,24 @@ It is set to English but you can find alternatives here:
 
 [AppleKeyboardLayouts](https://github.com/acidanthera/OpenCorePkg/blob/master/Utilities/AppleKeyboardLayouts/AppleKeyboardLayouts.txt)
 
+
+
 </details>
 
 <details>  
-<summary><strong>Big Sur, Monterey, or Ventura</strong></summary>
-<br>
+<summary><strong>Monterey or Ventura</strong></summary>
 
 
 
-The EFI folder is setup for both Monterey and Big Sur. It kinda works with [Ventura](https://github.com/seven-of-eleven/Lenovo-ThinkPad-L13-Yoga-Hackintosh/issues/17) but there are still some issues so YMMV. I used `MinKernel` and `MaxKernel` values in the config.plist to load the proper kexts based on which OS is being used.
+The EFI folder is setup for both Monterey and Ventura. I used `MinKernel` and `MaxKernel` values in the config.plist to load the proper kexts based on which OS is being used. **It kinda works with Ventura but there are still some issues:**
 
-I'm primarily using this EFI with Monterey 12.6 at the moment. Let me know if you have issues with Big Sur.
+1. To use the stylus you need VoodooI2C-2.6.5 (last version where stylus was working). I still haven't had time to examine this fully. Unfortunately this creates kernel panics when shutting down or rebooting in Ventura.
+2. When shutting down Ventura with VoodooI2C-2.6.5 kexts installed the computer reboots.
+3. If you upgrade to newer version of VooVoodooI2C then Ventura works (touch works with finger) but the stylus doesn't.
+
+> I'm primarily using this EFI with Monterey 12.6.3 at the moment.
+
+
 
 </details>  
 
@@ -276,7 +305,7 @@ I'm primarily using this EFI with Monterey 12.6 at the moment. Let me know if yo
 
 <details>  
 <summary><strong>TrackPad - Disable force touch</strong></summary>
-<br>
+
 
 
 If the **Battery** management **doesn't show up** in the System Preferences after the SSDT-OCBAT1-lenovoPRO13.aml file is added to your ACPI folder and config.plist file. You will not be able to change any trackpad settings. You may experience the annoying behaviour of clicking on the touchpad and it doing a **Force Touch** where the preview of the file is shown. I found this very annoying. You can disable force touch by modifying the file in `~/Library/Preferences/com.apple.AppleMultitouchTrackpad.plist`
@@ -307,20 +336,24 @@ Use [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS) to create your own serial
 
 Generate `CPUFriendDataProvider` or `ssdt_data.aml` (choose one) for your machine [here](https://github.com/acidanthera/CPUFriend) or use the ssd_data.aml file provided. My files are set for power conservation over performance. Highly recommended that you use power management.
 
-</details>  
 
-<details>  
+
+</details>
+
+<details> 
 <summary><strong>USB Port Mapping</strong></summary>
-<br>
 
 
-While first port mapping I followed the [Dortania guide here](https://dortania.github.io/OpenCore-Post-Install/usb/#macos-and-the-15-port-limit) with USBInjectAll.kext install...  when doing so the internal USB ports did not show up and the cameras, touch screen, and bluetooth did not function. I noticed on the `USBmap tool` screen that RHUB was showing so I Googled it and it brought me back to the [Dortania guide here](https://dortania.github.io/OpenCore-Post-Install/usb/manual/manual.html#special-notes). I added the SSDT-RHUB.aml to the APCI folder rebooted and all the ports showed up. I then mapped the USB ports creating the included USBMap.kext file. After mapping the ports I left the SSDT-RHUB.aml file in the APCI folder (not sure if it is still needed?).
+
+While first port mapping I followed the [Dortania guide here](https://dortania.github.io/OpenCore-Post-Install/usb/#macos-and-the-15-port-limit) with USBInjectAll.kext install...  when doing so the internal USB ports did not show up and the cameras, touch screen, and bluetooth did not function. I noticed on the `USBmap tool` screen that RHUB was showing so I Googled it and it brought me back to the [Dortania guide here](https://dortania.github.io/OpenCore-Post-Install/usb/manual/manual.html#special-notes). I added the SSDT-RHUB.aml to the APCI folder rebooted and all the ports showed up. I then mapped the USB ports creating the included USBMap.kext file.
+
+
 
 </details>  
 
 <details>  
 <summary><strong>Audio Setup</strong></summary>
-<br>
+
 
 
 
@@ -339,7 +372,9 @@ DeviceProperties
 | PciRoot(0x0)/Pci(0x1F,0x3) | Dictionary |              |
 | layout-id                  | Data       | **0f000000** |
 
-</details>  
+
+
+</details>
 
 ## Status
 
@@ -369,6 +404,8 @@ DeviceProperties
 - [x] SD Card reader
 - [x] SmartCard Reader `not available on all units`
 
+
+
 </details>  
 
 <details>  
@@ -379,6 +416,8 @@ DeviceProperties
 - [ ] Fingerprint reader - `No. Don't expect macOS driver any time soon.`
 - [ ] Samsung PM 981 NVME drive - `Still unstable. Could work for some, not for others.`
 - [ ] Intel Optane - `It causes Kernel Panic in boot` (see [issue #14](https://github.com/seven-of-eleven/Lenovo-ThinkPad-L13-Yoga-Hackintosh/issues/14))
+
+
 
 </details>  
 
@@ -392,6 +431,8 @@ DeviceProperties
 - [ ] Sidecar wired
 - [ ] Sidecar wireless
 - [ ] Windows/Linux from OC boot menu`I'm not dual booting my system but there's no reason it shouldn't work.`
+
+
 
 </details> 
 
