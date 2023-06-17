@@ -4,7 +4,7 @@
 
 <img align="right" src="./Other/README_Resources/l13-yoga2.png" alt="L13 Yoga macOS" width="430">
 
-[![OpenCore](https://img.shields.io/badge/OpenCore-0.8.9-blue.svg)](https://github.com/acidanthera/OpenCorePkg) [![macOS-Unstable](https://img.shields.io/badge/macOS-12.6.3-brightgreen.svg)](https://www.apple.com/macos/monterey) [![macOS-Unstable](https://img.shields.io/badge/macOS-13.2-yellow.svg)](https://www.apple.com/ca/macos/macos-ventura-preview/)
+[![OpenCore](https://img.shields.io/badge/OpenCore-0.9.3-blue.svg)](https://github.com/acidanthera/OpenCorePkg) [![macOS-Unstable](https://img.shields.io/badge/macOS-12.6.6-brightgreen.svg)](https://www.apple.com/macos/monterey) [![macOS-Unstable](https://img.shields.io/badge/macOS-13.3.2-yellow.svg)](https://www.apple.com/ca/macos/macos-ventura-preview/)
 
 **DISCLAIMER:**As you embark on your Hackintosh journey you are encouraged to **READ** the entire README and [Dortania](https://dortania.github.io/getting-started/) guides before you start, or check out some [Youtube videos](https://www.youtube.com/c/TechNolli) to get an understanding of the install process. It will save many a message instructing you to read the manual. **I am not an expert**, I haven't forced you to do anything, so put on your big boy pants and take responsibility for any mess you get yourself into.
 
@@ -128,10 +128,8 @@ To install macOS follow the guides provided by [Dortania](https://dortania.githu
 
 | Component      | Version |
 | -------------- | ------- |
-| macOS Monterey | 12.6.3  |
-| OpenCore       | v0.8.9* |
-
-`*Prior to OpenCore 0.6.7 MacOS would not boot on this computer.`
+| macOS Monterey | 12.6.6  |
+| OpenCore       | v0.9.3  |
 
 
 
@@ -159,28 +157,28 @@ To install macOS follow the guides provided by [Dortania](https://dortania.githu
 <summary><strong>Kernel extensions</strong></summary>
 
 
-| Kext                    | Version       |
-| :---------------------- | ------------- |
-| AirportItlwm            | 2.1.0         |
-| AirportItlwmV (Ventura) | 2.2.0 - alpha |
-| AppleALC                | 1.7.9         |
-| BrightnessKeys          | 1.0.2         |
-| CPUFriend               | 1.2.6         |
-| IntelBluetoothFirmware  | 2.2.0         |
-| BlueToolFixup.kext      | 2.6.4         |
-| IntelMausi              | 1.0.7         |
-| Lilu                    | 1.6.3         |
-| Sinetek-rtsx            | 9.0           |
-| SMCBatteryManager       | 1.3.0         |
-| SMCProcessor            | 1.3.0         |
-| SMCSuperIO              | 1.3.0         |
-| USBMap                  | 1.0.1         |
-| VirtualSMC              | 1.3.0         |
-| VoodooI2C               | 2.6.5         |
-| VoodooI2CHID            | 2.6.5         |
-| VoodooPS2Controller     | 2.3.2         |
-| WhateverGreen           | 1.6.4         |
-| YogaSMC                 | 1.5.3         |
+| Kext                    | Version |
+| :---------------------- | ------- |
+| AirportItlwm            | 2.2.0   |
+| AirportItlwmV (Ventura) | 2.2.0   |
+| AppleALC                | 1.8.3   |
+| BrightnessKeys          | 1.0.3   |
+| CPUFriend               | 1.2.7   |
+| IntelBluetoothFirmware  | 2.2.0   |
+| BlueToolFixup.kext      | 2.6.7   |
+| IntelMausi              | 1.0.7   |
+| Lilu                    | 1.6.6   |
+| Sinetek-rtsx            | 9.0     |
+| SMCBatteryManager       | 1.3.2   |
+| SMCProcessor            | 1.3.2   |
+| SMCSuperIO              | 1.3.2   |
+| USBMap                  | 1.0.1   |
+| VirtualSMC              | 1.3.2   |
+| VoodooI2C               | 2.6.5   |
+| VoodooI2CHID            | 2.6.5   |
+| VoodooPS2Controller     | 2.3.5   |
+| WhateverGreen           | 1.6.5   |
+| YogaSMC                 | 1.5.3   |
 
 
 
@@ -195,8 +193,8 @@ To install macOS follow the guides provided by [Dortania](https://dortania.githu
 |       Driver        | Version           |
 | :-----------------: | ----------------- |
 |     HfsPlus.efi     | 1.0.0             |
-|   OpenRuntime.efi   | OpenCorePkg 0.8.9 |
-| ResetNvramEntry.efi | OpenCorePkg 0.8.9 |
+|   OpenRuntime.efi   | OpenCorePkg 0.9.3 |
+| ResetNvramEntry.efi | OpenCorePkg 0.9.3 |
 
 
 
@@ -295,7 +293,7 @@ The EFI folder is setup for both Monterey and Ventura. I used `MinKernel` and `M
 2. When shutting down Ventura with VoodooI2C-2.6.5 kexts installed the computer reboots.
 3. If you upgrade to newer version of VoodooI2C then Ventura works (touch works with finger) but the stylus doesn't.
 
-> I'm primarily using this EFI with Monterey 12.6.3 at the moment.
+> I'm primarily using this EFI with Monterey 12.6.6 at the moment.
 
 
 
@@ -305,7 +303,6 @@ The EFI folder is setup for both Monterey and Ventura. I used `MinKernel` and `M
 
 <details>  
 <summary><strong>TrackPad - Disable force touch</strong></summary>
-
 
 
 If the **Battery** management **doesn't show up** in the System Preferences after the SSDT-OCBAT1-lenovoPRO13.aml file is added to your ACPI folder and config.plist file. You will not be able to change any trackpad settings. You may experience the annoying behaviour of clicking on the touchpad and it doing a **Force Touch** where the preview of the file is shown. I found this very annoying. You can disable force touch by modifying the file in `~/Library/Preferences/com.apple.AppleMultitouchTrackpad.plist`
@@ -353,8 +350,6 @@ While first port mapping I followed the [Dortania guide here](https://dortania.g
 
 <details>  
 <summary><strong>Audio Setup</strong></summary>
-
-
 
 
 The L13 Yoga has CX8070 for audio which requires the boot-arg **or** device property below. You can use the boot-args to initially setup your config.plist file as suggested in the guide or simply add the device property. Everything should work, built-in microphone, speakers, headphone jack and microphone. 
