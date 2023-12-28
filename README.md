@@ -4,15 +4,15 @@
 
 <img align="right" src="./Other/README_Resources/l13-yoga2.png" alt="L13 Yoga macOS" width="430">
 
-[![OpenCore](https://img.shields.io/badge/OpenCore-0.9.3-blue.svg)](https://github.com/acidanthera/OpenCorePkg) [![macOS-Unstable](https://img.shields.io/badge/macOS-12.6.6-brightgreen.svg)](https://www.apple.com/macos/monterey) [![macOS-Unstable](https://img.shields.io/badge/macOS-13.3.2-yellow.svg)](https://www.apple.com/ca/macos/macos-ventura-preview/)
+[![OpenCore](https://img.shields.io/badge/OpenCore-0.9.7-blue.svg)](https://github.com/acidanthera/OpenCorePkg) [![macOS-Unstable](https://img.shields.io/badge/macOS-12.7.2-brightgreen.svg)](https://www.apple.com/macos/) [![macOS-Unstable](https://img.shields.io/badge/macOS-13.6.3-orange.svg)](https://www.apple.com/ca/macos/) [![macOS-Unstable](https://img.shields.io/badge/macOS-14.2.1-brightgreen.svg)](https://www.apple.com/ca/macos/)
 
-**DISCLAIMER:**As you embark on your Hackintosh journey you are encouraged to **READ** the entire README and [Dortania](https://dortania.github.io/getting-started/) guides before you start, or check out some [Youtube videos](https://www.youtube.com/c/TechNolli) to get an understanding of the install process. It will save many a message instructing you to read the manual. **I am not an expert**, I haven't forced you to do anything, so put on your big boy pants and take responsibility for any mess you get yourself into.
+**DISCLAIMER: ** As you embark on your Hackintosh journey you are encouraged to **READ** the entire README and [Dortania](https://dortania.github.io/getting-started/) guides before you start, or check out some [Youtube videos](https://www.youtube.com/c/TechNolli) to get an understanding of the install process. It will save many a message instructing you to read the manual. **I am not an expert**, I haven't forced you to do anything, so put on your big boy pants and take responsibility for any mess you get yourself into.
 
 With that said I'm happy to help when/where I can. When you encounter bug or want to improve this repo, consider opening an issue or pull request. You can also find a wealth of knowledge on [Reddit](https://www.reddit.com/r/hackintosh/), [TonyMacX86](https://www.tonymacx86.com) or [Google](https://www.google.com).
 
 ## Introduction
 
-⚠️ Still issues with Ventura ⚠️ - see `Monterey or Ventura` below.
+⚠️ Still issues with Ventura & Sonoma ⚠️ - see `MacOS Selection` below.
 
 <details> 
 <summary><strong>This is not a guide!</strong></summary>
@@ -110,12 +110,14 @@ To install macOS follow the guides provided by [Dortania](https://dortania.githu
 | CPU       | Intel Core i5-10210U                                 |                                                              |
 | GPU       | Intel UHD                                            |                                                              |
 | SSD       | WD 512GB                                             | Replaced cursed PM 981 which still doesn't work reliably     |
-| Screen    | 13" FHD 1920x1080                                    | Multi touch and pen support working                          |
+| Screen    | 13" FHD 1920x1080                                    | Multi touch and pen* support working                         |
 | Memory    | 8GB / 2666MHz DDR4                                   |                                                              |
 | Battery   | Integrated Li-Polymer 46Wh                           | Single battery                                               |
 | Camera    | 720p Camera and 5MP camera                           | Both cameras working                                         |
 | Wifi & BT | Intel Wireless-AC 9560                               | Use AirportItlwm for your macOS version and enjoy native Wi-Fi control. |
 | Input     | PS2 Keyboard & I2CHID TrackPad (touchscreen and pen) | I'm using [YogaSMC](https://github.com/zhen-zen/YogaSMC) for media keys. The kext is in the folder but **you'll need to install the app.** |
+
+> *Pen support causes kernel panic with Ventura or Sonoma **during shutdown**. With the updated VoodooI2C kexts the pen will not function.
 
 
 
@@ -126,10 +128,10 @@ To install macOS follow the guides provided by [Dortania](https://dortania.githu
 
 
 
-| Component      | Version |
-| -------------- | ------- |
-| macOS Monterey | 12.6.6  |
-| OpenCore       | v0.9.3  |
+| Component    | Version |
+| ------------ | ------- |
+| macOS Sonoma | 14.2.1  |
+| OpenCore     | v0.9.7  |
 
 
 
@@ -157,28 +159,31 @@ To install macOS follow the guides provided by [Dortania](https://dortania.githu
 <summary><strong>Kernel extensions</strong></summary>
 
 
-| Kext                    | Version |
-| :---------------------- | ------- |
-| AirportItlwm            | 2.2.0   |
-| AirportItlwmV (Ventura) | 2.2.0   |
-| AppleALC                | 1.8.3   |
-| BrightnessKeys          | 1.0.3   |
-| CPUFriend               | 1.2.7   |
-| IntelBluetoothFirmware  | 2.2.0   |
-| BlueToolFixup.kext      | 2.6.7   |
-| IntelMausi              | 1.0.7   |
-| Lilu                    | 1.6.6   |
-| Sinetek-rtsx            | 9.0     |
-| SMCBatteryManager       | 1.3.2   |
-| SMCProcessor            | 1.3.2   |
-| SMCSuperIO              | 1.3.2   |
-| USBMap                  | 1.0.1   |
-| VirtualSMC              | 1.3.2   |
-| VoodooI2C               | 2.6.5   |
-| VoodooI2CHID            | 2.6.5   |
-| VoodooPS2Controller     | 2.3.5   |
-| WhateverGreen           | 1.6.5   |
-| YogaSMC                 | 1.5.3   |
+| Kext                    | Version     |
+| :---------------------- | ----------- |
+| AirportItlwm            | 2.2.0       |
+| AirportItlwmV (Ventura) | 2.2.0       |
+| AirportItlwmS (Sonoma)  | 2.3.0 alpha |
+| AppleALC                | 1.8.8       |
+| BrightnessKeys          | 1.0.3       |
+| CPUFriend               | 1.2.7       |
+| IntelBluetoothFirmware  | 2.3.0       |
+| BlueToolFixup.kext      | 2.6.8       |
+| IntelMausi              | 1.0.7       |
+| Lilu                    | 1.6.7       |
+| Sinetek-rtsx            | 9.0         |
+| SMCBatteryManager       | 1.3.2       |
+| SMCProcessor            | 1.3.2       |
+| SMCSuperIO              | 1.3.2       |
+| USBMap                  | 1.0.1       |
+| VirtualSMC              | 1.3.2       |
+| VoodooI2C*              | 2.8         |
+| VoodooI2CHID            | 2.8         |
+| VoodooPS2Controller     | 2.3.5       |
+| WhateverGreen           | 1.6.6       |
+| YogaSMC                 | 1.5.3       |
+
+> *VoodooI2C v2.6.5 kexts cause kernel panic for Ventura or Sonoma **during shutdown**. I've update the kexts to v2.8 as I don't typically use the pen but you can revert to v2.6.5 if you need pen support.
 
 
 
@@ -188,13 +193,11 @@ To install macOS follow the guides provided by [Dortania](https://dortania.githu
   <summary><strong>UEFI drivers</strong></summary>
 
 
-
-
 |       Driver        | Version           |
 | :-----------------: | ----------------- |
 |     HfsPlus.efi     | 1.0.0             |
-|   OpenRuntime.efi   | OpenCorePkg 0.9.3 |
-| ResetNvramEntry.efi | OpenCorePkg 0.9.3 |
+|   OpenRuntime.efi   | OpenCorePkg 0.9.7 |
+| ResetNvramEntry.efi | OpenCorePkg 0.9.7 |
 
 
 
@@ -283,17 +286,18 @@ It is set to English but you can find alternatives here:
 </details>
 
 <details>  
-<summary><strong>Monterey or Ventura</strong></summary>
+<summary><strong>MacOS Selection</strong></summary>
 
 
 
-The EFI folder is setup for both Monterey and Ventura. I used `MinKernel` and `MaxKernel` values in the config.plist to load the proper kexts based on which OS is being used. **It kinda works with Ventura but there are still some issues:**
 
-1. To use the stylus you need VoodooI2C-2.6.5 (last version where stylus was working). I still haven't had time to examine this fully. Unfortunately this creates kernel panics when shutting down or rebooting in Ventura.
+The EFI folder is setup for both Monterey, Ventura, and Sonoma. I used `MinKernel` and `MaxKernel` values in the config.plist to load the proper kexts based on which OS is being used. **It kinda works with Ventura and Sonoma but there are still some issues:**
+
+1. To use the stylus you need VoodooI2C-v2.6.5 (last version where stylus was working). Unfortunately this creates kernel panics when shutting down or rebooting in Ventura.
 2. When shutting down Ventura with VoodooI2C-2.6.5 kexts installed the computer reboots.
 3. If you upgrade to newer version of VoodooI2C then Ventura works (touch works with finger) but the stylus doesn't.
 
-> I'm primarily using this EFI with Monterey 12.6.6 at the moment.
+> I'm primarily using this EFI with Sonoma 14.2.1 at the moment.
 
 
 
