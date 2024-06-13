@@ -241,7 +241,7 @@ To install macOS follow the guides provided by [Dortania](https://dortania.githu
 - `Virtualization -> Intel VT-d Feature` **Disabled**
 - `Virtualization -> Enhanced Windows Biometric Security` **Disabled**
 - `I/O Port Access -> FingerPrint Reader` **Disabled**
-- `I/O Port Access -> Memory Card Slot` **Disabled**
+- `I/O Port Access -> Memory Card Slot` **Enabled**
 - `Secure Boot -> Secure Boot` **Disabled**
 - `Intel SGX -> Intel SGX Control` **Disabled**
 - `Device Guard` **Disabled**
