@@ -4,7 +4,7 @@
 
 <img align="right" src="./Other/README_Resources/l13-yoga2.png" alt="L13 Yoga macOS" width="430">
 
-[![OpenCore](https://img.shields.io/badge/OpenCore-0.9.7-blue.svg)](https://github.com/acidanthera/OpenCorePkg) [![macOS-Unstable](https://img.shields.io/badge/macOS-12.7.2-brightgreen.svg)](https://www.apple.com/macos/) [![macOS-Unstable](https://img.shields.io/badge/macOS-13.6.3-orange.svg)](https://www.apple.com/ca/macos/) [![macOS-Unstable](https://img.shields.io/badge/macOS-14.2.1-brightgreen.svg)](https://www.apple.com/ca/macos/)
+[![OpenCore](https://img.shields.io/badge/OpenCore-1.0.0-blue.svg)](https://github.com/acidanthera/OpenCorePkg) [![macOS-Unstable](https://img.shields.io/badge/macOS-12.7.2-brightgreen.svg)](https://www.apple.com/macos/) [![macOS-Unstable](https://img.shields.io/badge/macOS-13.6.3-orange.svg)](https://www.apple.com/ca/macos/) [![macOS-Unstable](https://img.shields.io/badge/macOS-14.2.1-brightgreen.svg)](https://www.apple.com/ca/macos/)
 
 **DISCLAIMER: ** As you embark on your Hackintosh journey you are encouraged to **READ** the entire README and [Dortania](https://dortania.github.io/getting-started/) guides before you start, or check out some [Youtube videos](https://www.youtube.com/c/TechNolli) to get an understanding of the install process. It will save many a message instructing you to read the manual. **I am not an expert**, I haven't forced you to do anything, so put on your big boy pants and take responsibility for any mess you get yourself into.
 
@@ -108,7 +108,7 @@ To install macOS follow the guides provided by [Dortania](https://dortania.githu
 | --------- | ---------------------------------------------------- | ------------------------------------------------------------ |
 | Type      | 20R5, 20R6                                           |                                                              |
 | CPU       | Intel Core i5-10210U                                 |                                                              |
-| GPU       | Intel UHD                                            |                                                              |
+| GPU       | Intel UHD 630                                        |                                                              |
 | SSD       | WD 512GB                                             | Replaced cursed PM 981 which still doesn't work reliably     |
 | Screen    | 13" FHD 1920x1080                                    | Multi touch and pen* support working                         |
 | Memory    | 8GB / 2666MHz DDR4                                   |                                                              |
@@ -117,7 +117,6 @@ To install macOS follow the guides provided by [Dortania](https://dortania.githu
 | Wifi & BT | Intel Wireless-AC 9560                               | Use AirportItlwm for your macOS version and enjoy native Wi-Fi control. |
 | Input     | PS2 Keyboard & I2CHID TrackPad (touchscreen and pen) | I'm using [YogaSMC](https://github.com/zhen-zen/YogaSMC) for media keys. The kext is in the folder but **you'll need to install the app.** |
 
-> *Pen support causes kernel panic with Ventura or Sonoma **during shutdown**. With the updated VoodooI2C kexts the pen will not function.
 
 
 
@@ -131,7 +130,7 @@ To install macOS follow the guides provided by [Dortania](https://dortania.githu
 | Component    | Version |
 | ------------ | ------- |
 | macOS Sonoma | 14.2.1  |
-| OpenCore     | v0.9.7  |
+| OpenCore     | v1.0.0  |
 
 
 
@@ -171,19 +170,20 @@ To install macOS follow the guides provided by [Dortania](https://dortania.githu
 | BlueToolFixup.kext      | 2.6.8       |
 | IntelMausi              | 1.0.7       |
 | Lilu                    | 1.6.7       |
-| Sinetek-rtsx            | 9.0         |
+| RealtekCardReader       | 0.9.7       |
+| RealtekCardReaderFriend | 1.0.4       |
 | SMCBatteryManager       | 1.3.2       |
 | SMCProcessor            | 1.3.2       |
 | SMCSuperIO              | 1.3.2       |
 | USBMap                  | 1.0.1       |
 | VirtualSMC              | 1.3.2       |
-| VoodooI2C*              | 2.8         |
-| VoodooI2CHID            | 2.8         |
-| VoodooPS2Controller     | 2.3.5       |
+| VoodooI2C*              | 2.8 custom  |
+| VoodooI2CHID            | 2.8 custom  |
+| VoodooPS2Controller     | 2.3.5 custom|
 | WhateverGreen           | 1.6.6       |
 | YogaSMC                 | 1.5.3       |
 
-> *VoodooI2C v2.6.5 kexts cause kernel panic for Ventura or Sonoma **during shutdown**. I've update the kexts to v2.8 as I don't typically use the pen but you can revert to v2.6.5 if you need pen support.
+> *VoodooI2C issues have been fixed. Custom addition means that files have been altered to work properly(not from main github)
 
 
 
@@ -196,8 +196,8 @@ To install macOS follow the guides provided by [Dortania](https://dortania.githu
 |       Driver        | Version           |
 | :-----------------: | ----------------- |
 |     HfsPlus.efi     | 1.0.0             |
-|   OpenRuntime.efi   | OpenCorePkg 0.9.7 |
-| ResetNvramEntry.efi | OpenCorePkg 0.9.7 |
+|   OpenRuntime.efi   | OpenCorePkg 1.0.0 |
+| ResetNvramEntry.efi | OpenCorePkg 1.0.0 |
 
 
 
